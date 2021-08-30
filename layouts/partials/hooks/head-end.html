@@ -1,0 +1,104 @@
+<script src="https://unpkg.com/three@0.131.3/build/three.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script>
+    window.addEventListener('load', init);
+    function init() {
+
+        var drawElem = document.createElement("canvas");
+        drawElem.textContent = "";
+        drawElem.setAttribute("id", "bg-canvas");
+        var parentDiv = document.getElementById("td-cover-block-0");
+        if (parentDiv != null) {
+                
+            drawElem.style.position="absolute";
+            drawElem.style.top=0;
+            drawElem.style.left=0;
+            drawElem.style.width="100%";
+            drawElem.style.height="100%";
+            
+            parentDiv.insertBefore(drawElem, parentDiv.firstChild);
+            const query = document.querySelector('#bg-canvas');
+
+            const width = query.clientWidth;
+            const height = query.clientHeight;
+
+            const renderer = new THREE.WebGLRenderer({
+                canvas: document.querySelector('#bg-canvas'),
+                antialias: true
+            });
+
+            renderer.setPixelRatio(window.devicePixelRatio);
+            renderer.setSize(width, height);
+
+            const scene = new THREE.Scene();    // make scene
+            scene.fog = new THREE.Fog(0x000000, 50, 2000);
+
+            // make cammera
+            const camera = new THREE.PerspectiveCamera(45, width / height);
+            camera.position.set(0, 0, 0);
+            camera.lookAt(new THREE.Vector3(0, 0, 100));
+
+            // make group
+            const group = new THREE.Group();
+            scene.add(group);
+
+            for (let i = 0; i < 400;) {
+                
+                const x = Math.random();
+                const y = Math.random();
+                const z = Math.random();
+                if ((x > 0.55 || x < 0.45) && (y > 0.55 || y < 0.45)) {
+
+                    const col = Math.floor(Math.random() * 255.9) * 0x10000 + Math.floor(Math.random() * 255.9) * 0x100 + Math.floor(Math.random() * 255.9)
+                    const material = new THREE.MeshStandardMaterial({color: col, roughness: 1.0});
+                    const geometry = new THREE.BoxGeometry(100 + Math.random() * 50, 100 + Math.random() * 50, 100 + Math.random() * 50);
+                    const mesh = new THREE.Mesh(geometry, material);
+
+                    // random positioning
+                    const radian = (i / 100) * Math.PI * 2;
+                    mesh.position.set(
+                        (x - 0.5) * 2000, // x
+                        (y - 0.5) * 2000, // y
+                        (z - 0.5) * 2000, // z
+                    );
+                    mesh.rotation.set(
+                        (Math.random() - 0.5) * 2000, // x
+                        (Math.random() - 0.5) * 2000, // y
+                        (Math.random() - 0.5) * 2000, // z
+                    )
+
+                    // add group
+                    group.add(mesh);
+                    i++;
+                }
+                
+            }
+
+            // light
+            const light = new THREE.PointLight(0xFFFFFF, 10, 1500, 1.0);
+            scene.add(light);
+
+            speed = [0, 0, 0];
+            tick();
+
+            function tick() {
+                // group.rotation.x += speed[0] / 2;
+                group.rotation.y += 0.0005;
+
+                // rendering
+                renderer.render(scene, camera);
+                requestAnimationFrame(tick);
+            }
+        }
+    }
+    $(function(){
+        $('a[href^=#]').click(function() {
+        var speed = 500; // スクロール速度(ミリ秒)
+        var href = $(this).attr("href");
+        var target = $(href == "#" || href == "" ? 'html' : href);
+        var position = target.offset().top;
+        $('html').animate({scrollTop:position}, speed, 'swing');
+        return false;
+        });
+    }); 
+</script>

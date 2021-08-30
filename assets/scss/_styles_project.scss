@@ -1,3 +1,16 @@
 a, .btn {
     transition: 0.3s;
 }
+
+#td-cover-block-0 {
+    background: black !important;
+}
+
+footer {
+    a {
+        color: white;
+        &:hover {
+            color: white;
+        }
+    }
+}
