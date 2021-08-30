@@ -1,0 +1,136 @@
+baseURL: "./"
+languageCode: ja
+title: rehearsal
+theme: docsy
+
+# language configuration
+contentDir: "content/ja"
+defaultContentLanguage: "ja"
+defaultContentLanguageInSubdir: false
+enableMissingTranslationPlaceholder: true
+
+# highlighting configuration
+pygmentsCodeFences: true
+pygmentsUseClasses: false
+pygmentsUseClassic: false
+pygmentsOptions: linenos=table
+pygmentsStyle: native
+
+# Twitter card image
+# images: 
+#  - images/project-illustration.png
+
+# url configuration
+permalinks:
+  blog: "/:section/:year/:month/:day/:slug/"
+
+outputs:
+  home: [HTML]
+  page: [HTML]  
+
+# Configuration for BlackFriday markdown parser: https://github.com/russross/blackfriday
+blackfriday:
+  plainIDAnchors: true
+  hrefTargetBlank: true
+  angledQuotes: false
+  latexDashes: true
+
+# Image processing configuration
+imaging:
+  resampleFilter: CatmullRom
+  quality: 75
+  anchor: smart
+
+# menu item configurations
+menu:
+  main:
+    - name: "GitHub"
+      weight: 40
+      url: "https://github.com/rehearsal-open/rehearsal"
+      pre: "<i class='fab fa-github'></i>"
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    style: native
+
+languages:
+  ja:
+    languageName: 日本語
+    weight: 1
+
+params:
+  version_menu: Releases
+  archived_version: false
+  version: 1
+  url_latest_version: https://github.com/rehearsal-open/rehearsal
+  github_project_repo: https://github.com/rehearsal-open/rehearsal
+  time_format_blog: "Monday, January 02, 2006"
+  time_format_default: "January 02, 2006"
+
+  # google custom search engine id
+  algolia_docsearch: true # todo: Enable Algolia: https://www.docsy.dev/docs/adding-content/navigation/#adding-algolia-docsearch
+
+  # enable syntax highlighting and copy buttons code blocks with Prism
+  prism_syntax_highlighting: false
+
+  ui:
+    sidebar_menu_compact: false
+    sidebar_menu_foldable: true
+    sidebar_cache_limit: 10
+    sidebar_search_disable: true
+    breadcrumb_disable: false
+    navbar_logo: true
+
+    feedback:
+      enable: true
+      yes: "ご回答ありがとうございます。"
+      no: "ご回答ありがとうございます。"
+
+    readingtime:
+      enable: true
+
+  links:
+    user:
+      - name: GitHub Discussions
+        url: https://github.com/rehearsal-open/rehearsal/discussions
+        icon: fab fa-github
+        desc: Discussion and help from your fellow users
+    developer:
+      - name: GitHub
+        url: https://github.com/streamwest-1629
+        icon: fab fa-github
+        desc: Kasai Koji(Streamwest-1629)'s github userpage
+      - name: Twitter
+        url: https://twitter.com/streamwest1629
+        icon: fab fa-twitter
+        desc: Kasai Koji's twitter
+  
+  mermaid:
+    enable: true
+    theme: default
+
+  plantuml:
+    enable: true
+    theme: default
+    svg_image_url: https://plantuml.com/plantuml/svg/ 
+
+  katex:
+    enable: true
+    html_dom_element: document.body
+
+    mhchem:
+      enable: true
+
+  print:
+    disable_toc: false
+
+  markup:
+    enable: true
+
+taxonomies:
+  tag: tags
+  category: categories
+
