@@ -2,6 +2,10 @@ baseURL: "./"
 languageCode: ja
 title: rehearsal
 theme: docsy
+publishDir: ./docs
+
+enableRobotsTXT: true
+enableGitInfo: true
 
 # language configuration
 contentDir: "content/ja"
@@ -62,6 +66,7 @@ languages:
     weight: 1
 
 params:
+  copyright: rehearsal author, Kasai Koji
   version_menu: Releases
   archived_version: false
   version: 1
@@ -69,6 +74,8 @@ params:
   github_project_repo: https://github.com/rehearsal-open/rehearsal
   time_format_blog: "Monday, January 02, 2006"
   time_format_default: "January 02, 2006"
+
+  rss_sections: ["blog"]
 
   # google custom search engine id
   algolia_docsearch: true # todo: Enable Algolia: https://www.docsy.dev/docs/adding-content/navigation/#adding-algolia-docsearch
@@ -78,7 +85,7 @@ params:
 
   ui:
     sidebar_menu_compact: false
-    sidebar_menu_foldable: true
+    sidebar_menu_foldable: false
     sidebar_cache_limit: 10
     sidebar_search_disable: true
     breadcrumb_disable: false
