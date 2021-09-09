@@ -49,7 +49,7 @@ imaging:
 menu:
   main:
     - name: "GitHub"
-      weight: 40
+      weight: 50
       url: "https://github.com/rehearsal-open/rehearsal"
       pre: "<i class='fab fa-github'></i>"
 
