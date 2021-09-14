@@ -6,3 +6,42 @@ type: docs
 description: rehearsal-cliはYAML形式のテンプレートファイルを使用して実際に実行するためのツールです。この章では、rehearsal-cliのインストール方法、実行コマンドを紹介します。
 ---
 
+rehearsal-cliで使用できるコマンドについて解説します。
+
+# `rehearsal-cli run`コマンド
+## 概要
+テンプレートファイルに基づいてタスクを実行します。テンプレートファイルについては[ドキュメント「YAMLテンプレートファイル」]をご覧ください。
+
+## コマンドオプション
+### 【必須】`--path`, `-p`オプション
+テンプレートファイルを指定するためのパスです。絶対パス・相対パス共に使用できますが、相対パスの場合は現在開いているディレクトリを基準にします。
+
+### 【任意】`--plain`オプション
+rehearsalで出力するログを平たいテキストで表示します。これを設定しない場合は各タスクごとに文字色のあるログが生成されます。
+
+ログをファイルに出力する場合はこのオプションを設定するべきです。
+
+### 【任意】`-h`, `--help`オプション
+ヘルプを表示します。
+## 例
+```bash
+$ rehearsal-cli run --p ./rehearsal.yml
+$ rehearsal-cli run --p ./rehearsal.yml --plain > ./log.txt
+```
+
+# `rehearsal-cli help`コマンド
+## 概要
+ヘルプを表示します。
+## 例
+```bash
+$ rehearsal-cli help
+```
+
+# `rehearsal-cli version`コマンド
+## 概要
+rehearsalのバージョン情報を表示します。
+
+## 例
+```bash
+$ rehearsal-cli version
+```
