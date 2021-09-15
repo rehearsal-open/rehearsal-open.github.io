@@ -1,10 +1,20 @@
-a, .btn {
-    transition: 0.3s;
+a, .btn, .ptn-primary, .ptn-secondary {
+    transition: 0.5s;
 }
-.td-main a {
-    color: $primary !important;
-    &:hover {
-        color: $secondary !important;
+.td-section{
+
+    .td-main{
+        a {
+            color: $primary !important;
+            &:hover {
+                color: $secondary !important;
+            }
+        }
+        #TableOfContents {
+            a {
+                font-size: 88%;
+            }
+        }
     }
 }
 code:not(pre > code) {
@@ -25,11 +35,5 @@ footer {
         &:hover {
             color: white;
         }
-    }
-}
-
-#TableOfContents {
-    a {
-        font-size: 88%;
     }
 }
