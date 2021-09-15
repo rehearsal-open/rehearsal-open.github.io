@@ -1,6 +1,16 @@
 a, .btn {
     transition: 0.3s;
 }
+a {
+    color: $primary !important;
+    &:hover {
+        color: $secondary !important;
+    }
+}
+code:not(pre > code) {
+    color: $secondary !important;
+}
+
 strong {
     font-weight: bold;
 }
@@ -15,5 +25,11 @@ footer {
         &:hover {
             color: white;
         }
+    }
+}
+
+#TableOfContents {
+    a {
+        font-size: 88%;
     }
 }
