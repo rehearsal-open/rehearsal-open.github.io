@@ -1,7 +1,7 @@
 a, .btn {
     transition: 0.3s;
 }
-a {
+.td-main a {
     color: $primary !important;
     &:hover {
         color: $secondary !important;
