@@ -2,12 +2,16 @@ a, .btn, .ptn-primary, .ptn-secondary {
     transition: 0.5s;
 }
 .td-section{
-
     .td-main{
         a {
             color: $primary !important;
             &:hover {
                 color: $secondary !important;
+            }
+        }
+        main {
+            a {
+                font-weight: bold;
             }
         }
         #TableOfContents {
