@@ -1,0 +1,123 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>rehearsal – 環境構築</title>
+    <link>./getting-started/environments/</link>
+    <description>Recent content in 環境構築 on rehearsal</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Fri, 03 Sep 2021 13:47:49 +0900</lastBuildDate>
+    
+	  <atom:link href="./getting-started/environments/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Getting-Started: Getting Startedで使用するツールについて</title>
+      <link>./getting-started/environments/for-getting-started/</link>
+      <pubDate>Fri, 03 Sep 2021 14:17:37 +0900</pubDate>
+      
+      <guid>./getting-started/environments/for-getting-started/</guid>
+      <description>
+        
+        
+        &lt;p&gt;　rehearsalは &lt;strong&gt;「言語・デバイス・目的の壁を越えて」&lt;/strong&gt; をコンセプトに開発されているので、本来は自分の普段使用している言語・環境で実践するべきだと考えています。&lt;/p&gt;
+&lt;p&gt;しかし、残念ながら何らかの言語を用いてGetting Startedを書かなければいけません。このGetting Startedでは、主に基本的なPythonの標準入出力のみを使用して進めていくので基本的な部分を確認します。&lt;/p&gt;
+&lt;h2 id=&#34;インストール&#34;&gt;インストール&lt;/h2&gt;
+&lt;h3 id=&#34;python&#34;&gt;Python&lt;/h3&gt;
+&lt;p&gt;　すでにPython環境があるかどうかを確認し、ない場合はインストールを行ってください。任意のディレクトリでターミナル（&lt;code&gt;bash&lt;/code&gt; , &lt;code&gt;powershell&lt;/code&gt; , &lt;code&gt;cmd&lt;/code&gt; など）を開き、以下のコマンドを実行します（バージョンによって表示内容は異なる場合があります）。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868&#34;&gt;1
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;$ python --version
+Python 3.9.5
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;ダウンロードは&lt;a href=&#34;https://www.python.org/downloads/&#34;&gt;公式&lt;/a&gt;より配布されている物がよいでしょう。&lt;/p&gt;
+&lt;h3 id=&#34;cgcc&#34;&gt;C++(gcc)&lt;/h3&gt;
+&lt;p&gt;　すでにC++環境があるかどうかを確認し、ない場合はインストールを行ってください。
+任意のディレクトリでターミナル（&lt;code&gt;bash&lt;/code&gt; , &lt;code&gt;powershell&lt;/code&gt; , &lt;code&gt;cmd&lt;/code&gt; など）を開き、以下のコマンドを実行します（バージョンなど、各環境によって表示内容は異なる場合があります）。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868&#34;&gt;1
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868&#34;&gt;2
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868&#34;&gt;3
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868&#34;&gt;4
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868&#34;&gt;5
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868&#34;&gt;6
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868&#34;&gt;7
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868&#34;&gt;8
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868&#34;&gt;9
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;$ g++ -v
+Using built-in specs.
+&lt;span style=&#34;color:#40ffff&#34;&gt;COLLECT_GCC&lt;/span&gt;=C:&lt;span style=&#34;color:#ed9d13&#34;&gt;\t&lt;/span&gt;ools&lt;span style=&#34;color:#ed9d13&#34;&gt;\m&lt;/span&gt;sys64&lt;span style=&#34;color:#ed9d13&#34;&gt;\m&lt;/span&gt;ingw64&lt;span style=&#34;color:#ed9d13&#34;&gt;\b&lt;/span&gt;in&lt;span style=&#34;color:#ed9d13&#34;&gt;\g&lt;/span&gt;++.exe
+&lt;span style=&#34;color:#40ffff&#34;&gt;COLLECT_LTO_WRAPPER&lt;/span&gt;=C:/tools/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.3.0/lto-wrapper.exe
+Target: x86_64-w64-mingw32
+Configured with: ../gcc-10.3.0/configure --prefix=/mingw64 --with-local-prefix=/mingw64/local --build=x86_64-w64-mingw32 --host=x86_64-w64-mingw32 --target=x86_64-w64-mingw32 --with-native-system-header-dir=/mingw64/x86_64-w64-mingw32/include --libexecdir=/mingw64/lib --enable-bootstrap --enable-checking=release --with-arch=x86-64 --with-tune=generic --enable-languages=c,lto,c++,fortran,ada,objc,obj-c++,jit --enable-shared --enable-static --enable-libatomic --enable-threads=posix --enable-graphite --enable-fully-dynamic-string --enable-libstdcxx-filesystem-ts=yes --enable-libstdcxx-time=yes --disable-libstdcxx-pch --disable-libstdcxx-debug --enable-lto --enable-libgomp --disable-multilib --disable-rpath --disable-win32-registry --disable-nls --disable-werror --disable-symvers --with-libiconv --with-system-zlib --with-gmp=/mingw64 --with-mpfr=/mingw64 --with-mpc=/mingw64 --with-isl=/mingw64 --with-pkgversion=&lt;span style=&#34;color:#ed9d13&#34;&gt;&amp;#39;Rev2, Built by MSYS2 project&amp;#39;&lt;/span&gt; --with-bugurl=https://github.com/msys2/MINGW-packages/issues --with-gnu-as --with-gnu-ld --with-boot-ldflags=&lt;span style=&#34;color:#ed9d13&#34;&gt;&amp;#39;-pipe -Wl,--dynamicbase,--high-entropy-va,--nxcompat,--default-image-base-high -Wl,--disable-dynamicbase -static-libstdc++ -static-libgcc&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#ed9d13&#34;&gt;&amp;#39;LDFLAGS_FOR_TARGET=-pipe -Wl,--dynamicbase,--high-entropy-va,--nxcompat,--default-image-base-high&amp;#39;&lt;/span&gt; --enable-linker-plugin-flags=&lt;span style=&#34;color:#ed9d13&#34;&gt;&amp;#39;LDFLAGS=-static-libstdc++\ -static-libgcc\ -pipe\ -Wl,--dynamicbase,--high-entropy-va,--nxcompat,--default-image-base-high\ -Wl,--stack,12582912&amp;#39;&lt;/span&gt;
+Thread model: posix
+Supported LTO compression algorithms: zlib zstd
+gcc version 10.3.0 (Rev2, Built by MSYS2 project) 
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;ダウンロードはlinux仮想環境をインストールして同梱のものを用いるか、WindowsであればMSYS2を使用してgccをインストールするのがよいでしょう。&lt;/p&gt;
+&lt;h2 id=&#34;標準入出力&#34;&gt;標準入出力&lt;/h2&gt;
+&lt;h3 id=&#34;python-1&#34;&gt;Python&lt;/h3&gt;
+&lt;p&gt;　Pythonの標準入出力系の関数を確認します。 rehearsalのGetting Startedで使用する関数は &lt;strong&gt;2個&lt;/strong&gt; しかありません。これはどれだけ複雑な組み合わせをしていても変わりません。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868&#34;&gt;1
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868&#34;&gt;2
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#24909d&#34;&gt;str&lt;/span&gt; s
+&lt;span style=&#34;color:#24909d&#34;&gt;input&lt;/span&gt;(s)                     &lt;span style=&#34;color:#999;font-style:italic&#34;&gt;# 標準入力&lt;/span&gt;
+println(&lt;span style=&#34;color:#ed9d13&#34;&gt;&amp;#34;Hello World, &amp;#34;&lt;/span&gt; + s) &lt;span style=&#34;color:#999;font-style:italic&#34;&gt;# 標準出力・標準エラー出力（改行含む）&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;code&gt;input()&lt;/code&gt;, &lt;code&gt;print()&lt;/code&gt; はどちらも言語に組み込まれている関数で、それぞれ標準入力からのデータ取得、標準出力への書き込みを行います。&lt;/p&gt;
+&lt;h3 id=&#34;c&#34;&gt;C++&lt;/h3&gt;
+&lt;p&gt;　C++の標準入出力系の関数を確認します。rehearsalのGetting Startedで使用する関数は &lt;strong&gt;2個&lt;/strong&gt; しかありません。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868&#34;&gt; 1
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868&#34;&gt; 2
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868&#34;&gt; 3
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868&#34;&gt; 4
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868&#34;&gt; 5
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868&#34;&gt; 6
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868&#34;&gt; 7
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868&#34;&gt; 8
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868&#34;&gt; 9
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868&#34;&gt;10
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c++&#34; data-lang=&#34;c++&#34;&gt;&lt;span style=&#34;color:#cd2828;font-weight:bold&#34;&gt;#include&lt;/span&gt; &lt;span style=&#34;color:#cd2828;font-weight:bold&#34;&gt;&amp;lt;bits/stdc++.h&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#cd2828;font-weight:bold&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#cd2828;font-weight:bold&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#6ab825;font-weight:bold&#34;&gt;using&lt;/span&gt; &lt;span style=&#34;color:#6ab825;font-weight:bold&#34;&gt;namespace&lt;/span&gt; std;
+
+&lt;span style=&#34;color:#6ab825;font-weight:bold&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#447fcf&#34;&gt;main&lt;/span&gt;() {
+    string s;
+    cin &amp;gt;&amp;gt; s;                               &lt;span style=&#34;color:#999;font-style:italic&#34;&gt;// 標準入力
+&lt;/span&gt;&lt;span style=&#34;color:#999;font-style:italic&#34;&gt;&lt;/span&gt;    cout &amp;lt;&amp;lt; &lt;span style=&#34;color:#ed9d13&#34;&gt;&amp;#34;Hello World, &amp;#34;&lt;/span&gt; + s &amp;lt;&amp;lt; endl;    &lt;span style=&#34;color:#999;font-style:italic&#34;&gt;// 標準出力（改行含む）
+&lt;/span&gt;&lt;span style=&#34;color:#999;font-style:italic&#34;&gt;&lt;/span&gt;    cerr &amp;lt;&amp;lt; &lt;span style=&#34;color:#ed9d13&#34;&gt;&amp;#34;OK&amp;#34;&lt;/span&gt; &amp;lt;&amp;lt; endl;                   &lt;span style=&#34;color:#999;font-style:italic&#34;&gt;// 標準エラー出力（改行を含む、今回は使用しない）
+&lt;/span&gt;&lt;span style=&#34;color:#999;font-style:italic&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#6ab825;font-weight:bold&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#3677a9&#34;&gt;0&lt;/span&gt;;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;これらに相当する関数は各言語ある（と思っている）ので、Python以外を使用する方はそれらを利用してください。ただし、言語に組み込まれている関数の中には、Go言語の &lt;a href=&#34;https://pkg.go.dev/builtin#print&#34;&gt;&lt;code&gt;(builtin).print()&lt;/code&gt;&lt;/a&gt; 関数など、標準エラー出力に書き込む関数もあるためその確認もしておくとよいでしょう。&lt;/p&gt;
+&lt;h2 id=&#34;テキストエンコーディングについて&#34;&gt;テキストエンコーディングについて&lt;/h2&gt;
+&lt;p&gt;　残念ながら、開発者の力不足により異種のエンコーディングをrehearsal内部で変換する実装が行えていません。rehearsalとしては、一般的なutf-8の使用を推奨しています。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

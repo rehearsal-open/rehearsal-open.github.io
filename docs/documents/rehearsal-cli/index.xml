@@ -1,0 +1,19 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>rehearsal – rehearsal-cli（コマンドラインツール）</title>
+    <link>./documents/rehearsal-cli/</link>
+    <description>Recent content in rehearsal-cli（コマンドラインツール） on rehearsal</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Thu, 09 Sep 2021 16:35:43 +0900</lastBuildDate>
+    
+	  <atom:link href="./documents/rehearsal-cli/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+  </channel>
+</rss>

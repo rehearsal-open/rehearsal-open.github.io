@@ -1,0 +1,19 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>rehearsal – タスクの種類を知る</title>
+    <link>./documents/task-kind/</link>
+    <description>Recent content in タスクの種類を知る on rehearsal</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Sat, 18 Sep 2021 10:58:32 +0900</lastBuildDate>
+    
+	  <atom:link href="./documents/task-kind/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+  </channel>
+</rss>

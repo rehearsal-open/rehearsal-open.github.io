@@ -1,0 +1,249 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>rehearsal – YAMLテンプレートファイル</title>
+    <link>./documents/yaml-template/</link>
+    <description>Recent content in YAMLテンプレートファイル on rehearsal</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Thu, 09 Sep 2021 16:40:40 +0900</lastBuildDate>
+    
+	  <atom:link href="./documents/yaml-template/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Documents: バージョン1.202109の概要</title>
+      <link>./documents/yaml-template/v1/202109/</link>
+      <pubDate>Tue, 14 Sep 2021 15:26:25 +0900</pubDate>
+      
+      <guid>./documents/yaml-template/v1/202109/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;template&#34;&gt;テンプレートファイルのプロパティ&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868&#34;&gt;1
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868&#34;&gt;2
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868&#34;&gt;3
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868&#34;&gt;4
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868&#34;&gt;5
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868&#34;&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;color:#6ab825;font-weight:bold&#34;&gt;version&lt;/span&gt;:&lt;span style=&#34;color:#666&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#3677a9&#34;&gt;1.202109&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#6ab825;font-weight:bold&#34;&gt;phase&lt;/span&gt;:&lt;span style=&#34;color:#666&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;&lt;/span&gt;- &lt;span style=&#34;color:#999;font-style:italic&#34;&gt;# phase object&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;&lt;/span&gt;- &lt;span style=&#34;color:#999;font-style:italic&#34;&gt;# phase object&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#999;font-style:italic&#34;&gt;# ...&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#6ab825;font-weight:bold&#34;&gt;dir&lt;/span&gt;:&lt;span style=&#34;color:#666&#34;&gt; &lt;/span&gt;./&lt;span style=&#34;color:#666&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#999;font-style:italic&#34;&gt;# default directory&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;template-version&#34;&gt;&lt;strong&gt;【必須】&lt;/strong&gt;&lt;code&gt;version&lt;/code&gt;プロパティ（少数）&lt;/h3&gt;
+&lt;p&gt;バージョン情報を設定します。&lt;/p&gt;
+&lt;h3 id=&#34;template-phase&#34;&gt;&lt;strong&gt;【必須】&lt;/strong&gt;&lt;code&gt;phase&lt;/code&gt;プロパティ（Phaseオブジェクト配列）&lt;/h3&gt;
+&lt;p&gt;フェイズを定義します。詳細およびPhaseオブジェクトのプロパティについては&lt;a href=&#34;#phase&#34;&gt;Phaseオブジェクト&lt;/a&gt;をご覧ください。&lt;/p&gt;
+&lt;h3 id=&#34;template-dir&#34;&gt;【任意】&lt;code&gt;dir&lt;/code&gt;プロパティ（パス文字列）&lt;/h3&gt;
+&lt;p&gt;ファイル・ディレクトリの相対パスを参照する際の基準となるパスを指定します。規定値はテンプレートファイルを含んでいるディレクトリのパスです。
+このプロパティで相対パスを指定した場合はテンプレートファイルを含んでいるディレクトリのパスを基準にして検索します。&lt;/p&gt;
+&lt;h2 id=&#34;phase&#34;&gt;&lt;code&gt;Phase&lt;/code&gt;オブジェクト&lt;/h2&gt;
+&lt;p&gt;フェイズを定義します。フェイズの概念については&lt;a href=&#34;./documents/task-concepts/phase-and-task&#34;&gt;ドキュメント「フェイズとタスク」&lt;/a&gt;をご覧ください。同一フェイズ内に定義されているタスクは並列に実行され、他のフェイズに含まれているタスクは事前または事後に実行されます。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868&#34;&gt;1
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868&#34;&gt;2
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868&#34;&gt;3
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868&#34;&gt;4
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868&#34;&gt;5
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868&#34;&gt;6
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868&#34;&gt;7
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;color:#6ab825;font-weight:bold&#34;&gt;phase&lt;/span&gt;:&lt;span style=&#34;color:#666&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;&lt;/span&gt;- &lt;span style=&#34;color:#6ab825;font-weight:bold&#34;&gt;name&lt;/span&gt;:&lt;span style=&#34;color:#666&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#999;font-style:italic&#34;&gt;# phase name&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;　&lt;/span&gt;&lt;span style=&#34;color:#6ab825;font-weight:bold&#34;&gt;at&lt;/span&gt;:&lt;span style=&#34;color:#666&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#999;font-style:italic&#34;&gt;# phase order&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#6ab825;font-weight:bold&#34;&gt;task&lt;/span&gt;:&lt;span style=&#34;color:#666&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;  &lt;/span&gt;- &lt;span style=&#34;color:#999;font-style:italic&#34;&gt;# task object&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;  &lt;/span&gt;- &lt;span style=&#34;color:#999;font-style:italic&#34;&gt;# task object&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#999;font-style:italic&#34;&gt;# ...&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;phase-name&#34;&gt;&lt;strong&gt;【必須】&lt;/strong&gt;&lt;code&gt;name&lt;/code&gt;プロパティ（識別文字列）&lt;/h3&gt;
+&lt;p&gt;フェイズを定義するための識別値です。同一名のフェイズは許可されません。頭文字が英字であり、英数字とアンダーバーである文字列のみ使用できます。&lt;/p&gt;
+&lt;h3 id=&#34;phase-task&#34;&gt;&lt;strong&gt;【必須】&lt;/strong&gt;&lt;code&gt;task&lt;/code&gt;プロパティ（Taskオブジェクト配列）&lt;/h3&gt;
+&lt;p&gt;タスクを定義します。詳細およびTaskオブジェクトのプロパティについては&lt;a href=&#34;#task&#34;&gt;Taskオブジェクト&lt;/a&gt;をご覧ください。&lt;/p&gt;
+&lt;h3 id=&#34;phase-at&#34;&gt;【任意】&lt;code&gt;at&lt;/code&gt;プロパティ（整数）&lt;/h3&gt;
+&lt;p&gt;実行するタスクの順序を明示します。これを使用することで、より確実な順序の定義を示すことができます。規定値は未定義状態です。テンプレートファイルがYAMLファイルの場合は&lt;a href=&#34;https://pkg.go.dev/gopkg.in/yaml.v3&#34;&gt;gopkg.in/yaml.v3&lt;/a&gt;を使用しているため、ファイルに記述されている順番に読み取ります。&lt;/p&gt;
+&lt;p&gt;ただし、&lt;code&gt;at&lt;/code&gt;プロパティで順序が指定されているフェイズと指定されていないフェイズが混合している場合、&lt;code&gt;at&lt;/code&gt;プロパティで定義されているものを先に実行します。すべての&lt;code&gt;at&lt;/code&gt;プロパティが定義されているフェイズが終了してから定義されていないフェイズを実行します。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;at&lt;/code&gt;プロパティを含むフェイズと含まないフェイズが混合している状態は条件があいまいになり推奨されません。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;task&#34;&gt;&lt;code&gt;Task&lt;/code&gt;オブジェクト&lt;/h2&gt;
+&lt;p&gt;タスクを定義します。タスクの概念については&lt;a href=&#34;./documents/task-concepts&#34;&gt;ドキュメント「タスクの概念」&lt;/a&gt;をご覧ください。rehearsalはタスクとそれに紐づくプロセスを実行し、監視します。一部のプロパティは&lt;code&gt;kind&lt;/code&gt;プロパティによって異なりますが、以下に示すのは共通のプロパティです。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868&#34;&gt; 1
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868&#34;&gt; 2
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868&#34;&gt; 3
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868&#34;&gt; 4
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868&#34;&gt; 5
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868&#34;&gt; 6
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868&#34;&gt; 7
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868&#34;&gt; 8
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868&#34;&gt; 9
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868&#34;&gt;10
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868&#34;&gt;11
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;color:#6ab825;font-weight:bold&#34;&gt;task&lt;/span&gt;:&lt;span style=&#34;color:#666&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;&lt;/span&gt;- &lt;span style=&#34;color:#6ab825;font-weight:bold&#34;&gt;name&lt;/span&gt;:&lt;span style=&#34;color:#666&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#999;font-style:italic&#34;&gt;# task name&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#6ab825;font-weight:bold&#34;&gt;kind&lt;/span&gt;:&lt;span style=&#34;color:#666&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#999;font-style:italic&#34;&gt;# task kind&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#6ab825;font-weight:bold&#34;&gt;wait&lt;/span&gt;:&lt;span style=&#34;color:#666&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#999;font-style:italic&#34;&gt;# waiting for to quit application&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#6ab825;font-weight:bold&#34;&gt;until&lt;/span&gt;:&lt;span style=&#34;color:#666&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#999;font-style:italic&#34;&gt;# phase when close task&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#6ab825;font-weight:bold&#34;&gt;stdout&lt;/span&gt;:&lt;span style=&#34;color:#666&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#999;font-style:italic&#34;&gt;# stdout element configration&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#999;font-style:italic&#34;&gt;# ...: ...&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#6ab825;font-weight:bold&#34;&gt;stderr&lt;/span&gt;:&lt;span style=&#34;color:#666&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#999;font-style:italic&#34;&gt;# stderr element configuration&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#999;font-style:italic&#34;&gt;# ...: ...&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#999;font-style:italic&#34;&gt;# other property is different by `kind` property.&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#999;font-style:italic&#34;&gt;# ...: ...&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;task-name&#34;&gt;&lt;strong&gt;【必須】&lt;/strong&gt;&lt;code&gt;name&lt;/code&gt;プロパティ（識別文字列）&lt;/h3&gt;
+&lt;p&gt;タスクを定義するための識別値です。同一フェイズ内で同一名のタスクは許可されません。異なるフェイズで同一名のタスクは許可されます。頭文字が英字であり、英数字とアンダーバーである文字列のみ使用できます。&lt;/p&gt;
+&lt;h3 id=&#34;task-kind&#34;&gt;&lt;strong&gt;【必須】&lt;/strong&gt;&lt;code&gt;kind&lt;/code&gt;プロパティ（文字列）&lt;/h3&gt;
+&lt;p&gt;定義するタスクの種類です。サポートされているタスクの種類については&lt;a href=&#34;./documents/task-kind/#supported&#34;&gt;ドキュメント「タスクの種類/サポートしているタスクの一覧」&lt;/a&gt;をご覧ください。&lt;/p&gt;
+&lt;h3 id=&#34;task-wait&#34;&gt;【任意】&lt;code&gt;wait&lt;/code&gt;プロパティ（true/false）&lt;/h3&gt;
+&lt;p&gt;フェイズがタスクの終了を待機するかどうかを指定します。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;false&lt;/code&gt;を指定した場合は待機すべき他タスクの終了を確認した際にrehearsalによってそのタスクとプロセスが終了します。&lt;code&gt;true&lt;/code&gt;である場合はそのタスクが自主的に終了するまで待機します。&lt;code&gt;true&lt;/code&gt;である場合のタスクの終了条件については&lt;a href=&#34;./documents/task-kind&#34;&gt;ドキュメント「タスクの種類」&lt;/a&gt;をご覧ください。&lt;/p&gt;
+&lt;p&gt;既定では&lt;code&gt;true&lt;/code&gt;が設定されています。&lt;/p&gt;
+&lt;h3 id=&#34;task-until&#34;&gt;【任意】&lt;code&gt;until&lt;/code&gt;プロパティ（識別文字列）&lt;/h3&gt;
+&lt;p&gt;タスクの終了を行うフェイズを指定します。詳しくは&lt;a href=&#34;./documents/task-concepts/&#34;&gt;ドキュメント「フェイズとタスク」&lt;/a&gt;をご覧ください。未定義のフェイズを設定することはできません。&lt;/p&gt;
+&lt;p&gt;既定ではそのタスクを内包しているフェイズで終了することになっています。&lt;/p&gt;
+&lt;h3 id=&#34;task-stdout&#34;&gt;【任意】&lt;code&gt;stdout&lt;/code&gt;プロパティ（TaskElementオブジェクト）&lt;/h3&gt;
+&lt;p&gt;標準出力についてのプロパティです。詳細およびTaskElementオブジェクトのプロパティについては&lt;a href=&#34;#taskelement&#34;&gt;TaskElementオブジェクト&lt;/a&gt;をご覧ください。また、標準出力をサポートしているタスクの種類については&lt;a href=&#34;./documents/task-kind#element&#34;&gt;ドキュメント「タスクの種類/タスク別の入出力系動作内容」&lt;/a&gt;をご覧ください。&lt;/p&gt;
+&lt;p&gt;規定値はTaskElementオブジェクトのメンバープロパティの規定値が適用されます。&lt;/p&gt;
+&lt;h3 id=&#34;task-stderr&#34;&gt;【任意】&lt;code&gt;stderr&lt;/code&gt;プロパティ（TaskElementオブジェクト）&lt;/h3&gt;
+&lt;p&gt;標準エラー出力についてのプロパティです。詳細およびTaskElementオブジェクトのプロパティについては&lt;a href=&#34;#taskelement&#34;&gt;TaskElementオブジェクト&lt;/a&gt;をご覧ください。また、標準エラー出力をサポートしているタスクの種類については&lt;a href=&#34;./documents/task-kind#element&#34;&gt;ドキュメント「タスクの種類/タスク別の入出力系動作内容」&lt;/a&gt;をご覧ください。&lt;/p&gt;
+&lt;p&gt;規定値はTaskElementオブジェクトのメンバープロパティの規定値が適用されます。&lt;/p&gt;
+&lt;h2 id=&#34;task_cui&#34;&gt;&lt;code&gt;Task.cui&lt;/code&gt;オブジェクト&lt;/h2&gt;
+&lt;p&gt;CUIタスクを定義するためのプロパティです。CUIタスクは実行コマンドによって指定したアプリケーションを実行し、標準入出力を使用して通信します。内部では&lt;a href=&#34;https://pkg.go.dev/os/exec&#34;&gt;os/exec&lt;/a&gt;が使用されています。CUIタスクの詳細は&lt;a href=&#34;./documents/task-kind#cui&#34;&gt;タスクの種類/CUIタスク&lt;/a&gt;をご覧ください。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868&#34;&gt;1
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868&#34;&gt;2
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868&#34;&gt;3
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868&#34;&gt;4
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868&#34;&gt;5
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868&#34;&gt;6
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868&#34;&gt;7
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868&#34;&gt;8
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;color:#6ab825;font-weight:bold&#34;&gt;task&lt;/span&gt;:&lt;span style=&#34;color:#666&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;&lt;/span&gt;- &lt;span style=&#34;color:#999;font-style:italic&#34;&gt;# shared property&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#999;font-style:italic&#34;&gt;# ...: ...&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#6ab825;font-weight:bold&#34;&gt;cmd&lt;/span&gt;:&lt;span style=&#34;color:#666&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#999;font-style:italic&#34;&gt;# execute command&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#6ab825;font-weight:bold&#34;&gt;args&lt;/span&gt;:&lt;span style=&#34;color:#666&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#999;font-style:italic&#34;&gt;# arguments&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;  &lt;/span&gt;- &lt;span style=&#34;color:#999;font-style:italic&#34;&gt;# ...&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;  &lt;/span&gt;- &lt;span style=&#34;color:#999;font-style:italic&#34;&gt;# ....&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#6ab825;font-weight:bold&#34;&gt;dir&lt;/span&gt;:&lt;span style=&#34;color:#666&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#999;font-style:italic&#34;&gt;# directory&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;task_cui-cmd&#34;&gt;&lt;strong&gt;【必須】&lt;/strong&gt;&lt;code&gt;cmd&lt;/code&gt;プロパティ（文字列）&lt;/h3&gt;
+&lt;p&gt;実行コマンドを指定します。実行ファイルのあるパスやコマンドを指定できます。&lt;/p&gt;
+&lt;h3 id=&#34;task_cui-args&#34;&gt;&lt;strong&gt;【必須】&lt;/strong&gt;&lt;code&gt;args&lt;/code&gt;プロパティ（文字列配列）&lt;/h3&gt;
+&lt;p&gt;実行時にアプリケーションへ渡す引数を指定します。&lt;/p&gt;
+&lt;h3 id=&#34;task_cui-dir&#34;&gt;【任意】&lt;code&gt;dir&lt;/code&gt;プロパティ（パス文字列）&lt;/h3&gt;
+&lt;p&gt;コマンドを実行する際に使用するディレクトリです。既定では&lt;a href=&#34;#template-dir&#34;&gt;テンプレートファイルのdirプロパティ&lt;/a&gt;での値が適用されます。&lt;/p&gt;
+&lt;h2 id=&#34;task_serial&#34;&gt;&lt;code&gt;Task.serial&lt;/code&gt;オブジェクト&lt;/h2&gt;
+&lt;p&gt;SERIALタスクを定義するためのプロパティです。SERIALタスクは指定されたCOMポートを使用して、シリアル通信を標準入出力とします。内部では&lt;a href=&#34;https://pkg.go.dev/go.bug.st/serial&#34;&gt;go.bug.st/serial&lt;/a&gt;が使用されています。SERIALタスクの詳細は&lt;a href=&#34;./documents/task-kind#serial&#34;&gt;タスクの種類/SERIALタスク&lt;/a&gt;をご覧ください。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868&#34;&gt;1
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868&#34;&gt;2
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868&#34;&gt;3
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868&#34;&gt;4
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868&#34;&gt;5
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868&#34;&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;color:#6ab825;font-weight:bold&#34;&gt;task&lt;/span&gt;:&lt;span style=&#34;color:#666&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;&lt;/span&gt;- &lt;span style=&#34;color:#999;font-style:italic&#34;&gt;# shared property&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#999;font-style:italic&#34;&gt;# ...: ...&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#6ab825;font-weight:bold&#34;&gt;baudrate&lt;/span&gt;:&lt;span style=&#34;color:#666&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#999;font-style:italic&#34;&gt;# transmission speed (bps)&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#6ab825;font-weight:bold&#34;&gt;port&lt;/span&gt;:&lt;span style=&#34;color:#666&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#999;font-style:italic&#34;&gt;# COM Port name&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#6ab825;font-weight:bold&#34;&gt;databits&lt;/span&gt;:&lt;span style=&#34;color:#666&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#999;font-style:italic&#34;&gt;# length of data bits&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;task_serial-baudrate&#34;&gt;&lt;strong&gt;【必須】&lt;/strong&gt;&lt;code&gt;baudrate&lt;/code&gt;プロパティ（整数）&lt;/h3&gt;
+&lt;p&gt;使用するシリアル通信の通信速度です。単位はbpsで示され、&lt;code&gt;9600&lt;/code&gt;, &lt;code&gt;57600&lt;/code&gt;などが指定可能です。&lt;/p&gt;
+&lt;h3 id=&#34;task_serial-port&#34;&gt;【任意】&lt;code&gt;port&lt;/code&gt;プロパティ（文字列）&lt;/h3&gt;
+&lt;p&gt;シリアル通信で使用するポート番号です。&lt;code&gt;COM3&lt;/code&gt;などの表記で指定可能です。
+既定値は与えられませんが、rehearsal初期化中にポート番号をユーザーが指定することで不明なポート番号を解決します。&lt;/p&gt;
+&lt;h3 id=&#34;task_serial-databits&#34;&gt;【任意】&lt;code&gt;databits&lt;/code&gt;プロパティ（整数）&lt;/h3&gt;
+&lt;p&gt;1データ当たりのビット長です。&lt;code&gt;5&lt;/code&gt;, &lt;code&gt;6&lt;/code&gt;, &lt;code&gt;7&lt;/code&gt;, &lt;code&gt;8&lt;/code&gt;の中から指定可能です。既定では&lt;code&gt;8&lt;/code&gt;が指定されます。&lt;/p&gt;
+&lt;h2 id=&#34;task_net&#34;&gt;&lt;code&gt;Task.tcp&lt;/code&gt;, &lt;code&gt;Task.udp&lt;/code&gt;, &lt;code&gt;Task.unix&lt;/code&gt;オブジェクト&lt;/h2&gt;
+&lt;p&gt;それぞれTCPタスク、UDPタスク、UNIXタスクを定義するためのプロパティです。これらは各方式による通信を標準入出力とします。各タスクは&lt;a href=&#34;https://pkg.go.dev/net&#34;&gt;net&lt;/a&gt;が使用されています。各タスクの詳細は&lt;a href=&#34;documents/task-kind/#net&#34;&gt;ドキュメント「タスクの種類」&lt;/a&gt;をご覧ください。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868&#34;&gt;1
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868&#34;&gt;2
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868&#34;&gt;3
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868&#34;&gt;4
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;color:#6ab825;font-weight:bold&#34;&gt;task&lt;/span&gt;:&lt;span style=&#34;color:#666&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;&lt;/span&gt;- &lt;span style=&#34;color:#999;font-style:italic&#34;&gt;# shared property&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#999;font-style:italic&#34;&gt;# ...: ...&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#6ab825;font-weight:bold&#34;&gt;address&lt;/span&gt;:&lt;span style=&#34;color:#666&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#999;font-style:italic&#34;&gt;# address&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#6ab825;font-weight:bold&#34;&gt;sync&lt;/span&gt;:&lt;span style=&#34;color:#666&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#999;font-style:italic&#34;&gt;# io sync speed&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;task_net-address&#34;&gt;&lt;strong&gt;【必須】&lt;/strong&gt;&lt;code&gt;address&lt;/code&gt;プロパティ（文字列）&lt;/h3&gt;
+&lt;p&gt;接続先のアドレスを指定します。&lt;/p&gt;
+&lt;h3 id=&#34;task_net-sync&#34;&gt;【任意】&lt;code&gt;sync&lt;/code&gt;プロパティ（文字列）&lt;/h3&gt;
+&lt;p&gt;入出力の同期速度を指定します。既定では1秒毎の同期を行います。&lt;/p&gt;
+&lt;h2 id=&#34;taskelement&#34;&gt;&lt;code&gt;TaskElement&lt;/code&gt;オブジェクト&lt;/h2&gt;
+&lt;p&gt;各入出力のプロパティを設定します。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868&#34;&gt;1
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868&#34;&gt;2
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868&#34;&gt;3
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868&#34;&gt;4
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;color:#6ab825;font-weight:bold&#34;&gt;stdout&lt;/span&gt;:&lt;span style=&#34;color:#666&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#6ab825;font-weight:bold&#34;&gt;write-log&lt;/span&gt;:&lt;span style=&#34;color:#666&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#999;font-style:italic&#34;&gt;# print as log or not&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#6ab825;font-weight:bold&#34;&gt;sendto&lt;/span&gt;:&lt;span style=&#34;color:#666&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#999;font-style:italic&#34;&gt;# tasks which input is sent data&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;    &lt;/span&gt;- &lt;span style=&#34;color:#999;font-style:italic&#34;&gt;# ...&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;    &lt;/span&gt;- &lt;span style=&#34;color:#999;font-style:italic&#34;&gt;# ...&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;taskelement-write-log&#34;&gt;【任意】&lt;code&gt;write-log&lt;/code&gt;プロパティ（true/false）&lt;/h3&gt;
+&lt;p&gt;出力をログとして表示するかどうかを選択します。既定では&lt;code&gt;false&lt;/code&gt;です。&lt;/p&gt;
+&lt;h3 id=&#34;taskelement-sendto&#34;&gt;【任意】&lt;code&gt;sendto&lt;/code&gt;プロパティ（文字列配列）&lt;/h3&gt;
+&lt;p&gt;出力を入力として渡すタスクを定義時に示した名前を用いて指定します。複数のタスクを指定できます。以下のような形式で指定します。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;
+&lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868&#34;&gt;1
+&lt;/span&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; style=&#34;color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-md&#34; data-lang=&#34;md&#34;&gt;&lt;span style=&#34;color:#6ab825;font-weight:bold&#34;&gt;-&lt;/span&gt; &amp;lt;&lt;span style=&#34;color:#6ab825;font-weight:bold&#34;&gt;同一フェイズ内のタスク名&lt;/span&gt;&amp;gt;
+&lt;span style=&#34;color:#6ab825;font-weight:bold&#34;&gt;-&lt;/span&gt; &amp;lt;&lt;span style=&#34;color:#6ab825;font-weight:bold&#34;&gt;フェイズ名&lt;/span&gt;&amp;gt;::&amp;lt;&lt;span style=&#34;color:#6ab825;font-weight:bold&#34;&gt;タスク名&lt;/span&gt;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;既定ではデータを送信しません。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>
