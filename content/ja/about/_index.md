@@ -26,7 +26,7 @@ layout: docs
 # **rehearsal** について{#about}
 **rehearsal** はテスト環境を構築するプロセスリレーションツールです。一般的な入出力機能、通信規格を用いて、プロセスレベル、アプリケーションレベル、デバイスレベルで分割されたプロダクト間の通信を行うために使用されます。
 
-> このプロダクト一つ一つの事を **rehearsal** では **「タスク」** と呼んでいます。この仕組みについては[ドキュメント「タスクの概念について知る」](/documents/task-concepts)をご覧ください。
+> このプロダクト一つ一つの事を **rehearsal** では **「タスク」** と呼んでいます。この仕組みについては[**ドキュメント「タスクの概念について知る」**](/documents/task-concepts)をご覧ください。
 
 ユーザーは `.yaml` 形式の設定ファイルで各タスクの実行内容（実行時のコマンド、使用するポート番号など）や各タスクのデータの送信先などを記述し、 **rehearsal** 実行時に設定ファイルのパスを指定することで実行できます。
 
@@ -44,7 +44,7 @@ layout: docs
 
 {{% /blocks/section %}}
 
-{{% blocks/section type="section" color="white" %}}
+{{% blocks/section type="section" color="primary" %}}
 ## **rehearsal** に対する誤解{#misconception}
 **rehearsal** はその立ち位置の難しさから誤解されることが多々あります。
 #### **Case 1. rehearsalはテスト環境を提供するのみであり、テストツールではありません**{#misconception-case1}
