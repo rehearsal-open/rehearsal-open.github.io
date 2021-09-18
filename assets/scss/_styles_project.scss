@@ -11,6 +11,7 @@ html, body, aside {
     &::-webkit-scrollbar-track {
         background-color: lightgray;
     }
+    scroll-behavior: smooth;
 }
 a, .btn, .ptn-primary, .ptn-secondary {
     transition: 0.5s;
