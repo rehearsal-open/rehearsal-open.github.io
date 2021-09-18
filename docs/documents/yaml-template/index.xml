@@ -1,13 +1,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>rehearsal – YAMLテンプレートファイル</title>
-    <link>/documents/yaml-template/</link>
+    <link>https://rehearsal-open.github.io/documents/yaml-template/</link>
     <description>Recent content in YAMLテンプレートファイル on rehearsal</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <lastBuildDate>Thu, 09 Sep 2021 16:40:40 +0900</lastBuildDate>
     
-	  <atom:link href="/documents/yaml-template/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="https://rehearsal-open.github.io/documents/yaml-template/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -17,10 +17,10 @@
     
     <item>
       <title>Documents: バージョン1.202109の概要</title>
-      <link>/documents/yaml-template/v1/202109/</link>
+      <link>https://rehearsal-open.github.io/documents/yaml-template/v1/202109/</link>
       <pubDate>Tue, 14 Sep 2021 15:26:25 +0900</pubDate>
       
-      <guid>/documents/yaml-template/v1/202109/</guid>
+      <guid>https://rehearsal-open.github.io/documents/yaml-template/v1/202109/</guid>
       <description>
         
         
@@ -51,7 +51,7 @@
 &lt;p&gt;ファイル・ディレクトリの相対パスを参照する際の基準となるパスを指定します。規定値はテンプレートファイルを含んでいるディレクトリのパスです。
 このプロパティで相対パスを指定した場合はテンプレートファイルを含んでいるディレクトリのパスを基準にして検索します。&lt;/p&gt;
 &lt;h2 id=&#34;phase&#34;&gt;&lt;code&gt;Phase&lt;/code&gt;オブジェクト&lt;/h2&gt;
-&lt;p&gt;フェイズを定義します。フェイズの概念については&lt;a href=&#34;/documents/task-concepts/phase-and-task&#34;&gt;ドキュメント「フェイズとタスク」&lt;/a&gt;をご覧ください。同一フェイズ内に定義されているタスクは並列に実行され、他のフェイズに含まれているタスクは事前または事後に実行されます。&lt;/p&gt;
+&lt;p&gt;フェイズを定義します。フェイズの概念については&lt;a href=&#34;https://rehearsal-open.github.io/documents/task-concepts/phase-and-task&#34;&gt;ドキュメント「フェイズとタスク」&lt;/a&gt;をご覧ください。同一フェイズ内に定義されているタスクは並列に実行され、他のフェイズに含まれているタスクは事前または事後に実行されます。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;
 &lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; style=&#34;color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868&#34;&gt;1
@@ -83,7 +83,7 @@
 &lt;p&gt;&lt;code&gt;at&lt;/code&gt;プロパティを含むフェイズと含まないフェイズが混合している状態は条件があいまいになり推奨されません。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;task&#34;&gt;&lt;code&gt;Task&lt;/code&gt;オブジェクト&lt;/h2&gt;
-&lt;p&gt;タスクを定義します。タスクの概念については&lt;a href=&#34;/documents/task-concepts&#34;&gt;ドキュメント「タスクの概念」&lt;/a&gt;をご覧ください。rehearsalはタスクとそれに紐づくプロセスを実行し、監視します。一部のプロパティは&lt;code&gt;kind&lt;/code&gt;プロパティによって異なりますが、以下に示すのは共通のプロパティです。&lt;/p&gt;
+&lt;p&gt;タスクを定義します。タスクの概念については&lt;a href=&#34;https://rehearsal-open.github.io/documents/task-concepts&#34;&gt;ドキュメント「タスクの概念」&lt;/a&gt;をご覧ください。rehearsalはタスクとそれに紐づくプロセスを実行し、監視します。一部のプロパティは&lt;code&gt;kind&lt;/code&gt;プロパティによって異なりますが、以下に示すのは共通のプロパティです。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;
 &lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; style=&#34;color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868&#34;&gt; 1
@@ -115,22 +115,22 @@
 &lt;/div&gt;&lt;h3 id=&#34;task-name&#34;&gt;&lt;strong&gt;【必須】&lt;/strong&gt;&lt;code&gt;name&lt;/code&gt;プロパティ（識別文字列）&lt;/h3&gt;
 &lt;p&gt;タスクを定義するための識別値です。同一フェイズ内で同一名のタスクは許可されません。異なるフェイズで同一名のタスクは許可されます。頭文字が英字であり、英数字とアンダーバーである文字列のみ使用できます。&lt;/p&gt;
 &lt;h3 id=&#34;task-kind&#34;&gt;&lt;strong&gt;【必須】&lt;/strong&gt;&lt;code&gt;kind&lt;/code&gt;プロパティ（文字列）&lt;/h3&gt;
-&lt;p&gt;定義するタスクの種類です。サポートされているタスクの種類については&lt;a href=&#34;/documents/task-kind/#supported&#34;&gt;ドキュメント「タスクの種類/サポートしているタスクの一覧」&lt;/a&gt;をご覧ください。&lt;/p&gt;
+&lt;p&gt;定義するタスクの種類です。サポートされているタスクの種類については&lt;a href=&#34;https://rehearsal-open.github.io/documents/task-kind/#supported&#34;&gt;ドキュメント「タスクの種類/サポートしているタスクの一覧」&lt;/a&gt;をご覧ください。&lt;/p&gt;
 &lt;h3 id=&#34;task-wait&#34;&gt;【任意】&lt;code&gt;wait&lt;/code&gt;プロパティ（true/false）&lt;/h3&gt;
 &lt;p&gt;フェイズがタスクの終了を待機するかどうかを指定します。&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;false&lt;/code&gt;を指定した場合は待機すべき他タスクの終了を確認した際にrehearsalによってそのタスクとプロセスが終了します。&lt;code&gt;true&lt;/code&gt;である場合はそのタスクが自主的に終了するまで待機します。&lt;code&gt;true&lt;/code&gt;である場合のタスクの終了条件については&lt;a href=&#34;/documents/task-kind&#34;&gt;ドキュメント「タスクの種類」&lt;/a&gt;をご覧ください。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;false&lt;/code&gt;を指定した場合は待機すべき他タスクの終了を確認した際にrehearsalによってそのタスクとプロセスが終了します。&lt;code&gt;true&lt;/code&gt;である場合はそのタスクが自主的に終了するまで待機します。&lt;code&gt;true&lt;/code&gt;である場合のタスクの終了条件については&lt;a href=&#34;https://rehearsal-open.github.io/documents/task-kind&#34;&gt;ドキュメント「タスクの種類」&lt;/a&gt;をご覧ください。&lt;/p&gt;
 &lt;p&gt;既定では&lt;code&gt;true&lt;/code&gt;が設定されています。&lt;/p&gt;
 &lt;h3 id=&#34;task-until&#34;&gt;【任意】&lt;code&gt;until&lt;/code&gt;プロパティ（識別文字列）&lt;/h3&gt;
-&lt;p&gt;タスクの終了を行うフェイズを指定します。詳しくは&lt;a href=&#34;/documents/task-concepts/&#34;&gt;ドキュメント「フェイズとタスク」&lt;/a&gt;をご覧ください。未定義のフェイズを設定することはできません。&lt;/p&gt;
+&lt;p&gt;タスクの終了を行うフェイズを指定します。詳しくは&lt;a href=&#34;https://rehearsal-open.github.io/documents/task-concepts/&#34;&gt;ドキュメント「フェイズとタスク」&lt;/a&gt;をご覧ください。未定義のフェイズを設定することはできません。&lt;/p&gt;
 &lt;p&gt;既定ではそのタスクを内包しているフェイズで終了することになっています。&lt;/p&gt;
 &lt;h3 id=&#34;task-stdout&#34;&gt;【任意】&lt;code&gt;stdout&lt;/code&gt;プロパティ（TaskElementオブジェクト）&lt;/h3&gt;
-&lt;p&gt;標準出力についてのプロパティです。詳細およびTaskElementオブジェクトのプロパティについては&lt;a href=&#34;#taskelement&#34;&gt;TaskElementオブジェクト&lt;/a&gt;をご覧ください。また、標準出力をサポートしているタスクの種類については&lt;a href=&#34;/documents/task-kind#element&#34;&gt;ドキュメント「タスクの種類/タスク別の入出力系動作内容」&lt;/a&gt;をご覧ください。&lt;/p&gt;
+&lt;p&gt;標準出力についてのプロパティです。詳細およびTaskElementオブジェクトのプロパティについては&lt;a href=&#34;#taskelement&#34;&gt;TaskElementオブジェクト&lt;/a&gt;をご覧ください。また、標準出力をサポートしているタスクの種類については&lt;a href=&#34;https://rehearsal-open.github.io/documents/task-kind#element&#34;&gt;ドキュメント「タスクの種類/タスク別の入出力系動作内容」&lt;/a&gt;をご覧ください。&lt;/p&gt;
 &lt;p&gt;規定値はTaskElementオブジェクトのメンバープロパティの規定値が適用されます。&lt;/p&gt;
 &lt;h3 id=&#34;task-stderr&#34;&gt;【任意】&lt;code&gt;stderr&lt;/code&gt;プロパティ（TaskElementオブジェクト）&lt;/h3&gt;
-&lt;p&gt;標準エラー出力についてのプロパティです。詳細およびTaskElementオブジェクトのプロパティについては&lt;a href=&#34;#taskelement&#34;&gt;TaskElementオブジェクト&lt;/a&gt;をご覧ください。また、標準エラー出力をサポートしているタスクの種類については&lt;a href=&#34;/documents/task-kind#element&#34;&gt;ドキュメント「タスクの種類/タスク別の入出力系動作内容」&lt;/a&gt;をご覧ください。&lt;/p&gt;
+&lt;p&gt;標準エラー出力についてのプロパティです。詳細およびTaskElementオブジェクトのプロパティについては&lt;a href=&#34;#taskelement&#34;&gt;TaskElementオブジェクト&lt;/a&gt;をご覧ください。また、標準エラー出力をサポートしているタスクの種類については&lt;a href=&#34;https://rehearsal-open.github.io/documents/task-kind#element&#34;&gt;ドキュメント「タスクの種類/タスク別の入出力系動作内容」&lt;/a&gt;をご覧ください。&lt;/p&gt;
 &lt;p&gt;規定値はTaskElementオブジェクトのメンバープロパティの規定値が適用されます。&lt;/p&gt;
 &lt;h2 id=&#34;task_cui&#34;&gt;&lt;code&gt;Task.cui&lt;/code&gt;オブジェクト&lt;/h2&gt;
-&lt;p&gt;CUIタスクを定義するためのプロパティです。CUIタスクは実行コマンドによって指定したアプリケーションを実行し、標準入出力を使用して通信します。内部では&lt;a href=&#34;https://pkg.go.dev/os/exec&#34;&gt;os/exec&lt;/a&gt;が使用されています。CUIタスクの詳細は&lt;a href=&#34;/documents/task-kind#cui&#34;&gt;タスクの種類/CUIタスク&lt;/a&gt;をご覧ください。&lt;/p&gt;
+&lt;p&gt;CUIタスクを定義するためのプロパティです。CUIタスクは実行コマンドによって指定したアプリケーションを実行し、標準入出力を使用して通信します。内部では&lt;a href=&#34;https://pkg.go.dev/os/exec&#34;&gt;os/exec&lt;/a&gt;が使用されています。CUIタスクの詳細は&lt;a href=&#34;https://rehearsal-open.github.io/documents/task-kind#cui&#34;&gt;タスクの種類/CUIタスク&lt;/a&gt;をご覧ください。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;
 &lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; style=&#34;color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868&#34;&gt;1
@@ -160,7 +160,7 @@
 &lt;h3 id=&#34;task_cui-dir&#34;&gt;【任意】&lt;code&gt;dir&lt;/code&gt;プロパティ（パス文字列）&lt;/h3&gt;
 &lt;p&gt;コマンドを実行する際に使用するディレクトリです。既定では&lt;a href=&#34;#template-dir&#34;&gt;テンプレートファイルのdirプロパティ&lt;/a&gt;での値が適用されます。&lt;/p&gt;
 &lt;h2 id=&#34;task_serial&#34;&gt;&lt;code&gt;Task.serial&lt;/code&gt;オブジェクト&lt;/h2&gt;
-&lt;p&gt;SERIALタスクを定義するためのプロパティです。SERIALタスクは指定されたCOMポートを使用して、シリアル通信を標準入出力とします。内部では&lt;a href=&#34;https://pkg.go.dev/go.bug.st/serial&#34;&gt;go.bug.st/serial&lt;/a&gt;が使用されています。SERIALタスクの詳細は&lt;a href=&#34;/documents/task-kind#serial&#34;&gt;タスクの種類/SERIALタスク&lt;/a&gt;をご覧ください。&lt;/p&gt;
+&lt;p&gt;SERIALタスクを定義するためのプロパティです。SERIALタスクは指定されたCOMポートを使用して、シリアル通信を標準入出力とします。内部では&lt;a href=&#34;https://pkg.go.dev/go.bug.st/serial&#34;&gt;go.bug.st/serial&lt;/a&gt;が使用されています。SERIALタスクの詳細は&lt;a href=&#34;https://rehearsal-open.github.io/documents/task-kind#serial&#34;&gt;タスクの種類/SERIALタスク&lt;/a&gt;をご覧ください。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;
 &lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; style=&#34;color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868&#34;&gt;1

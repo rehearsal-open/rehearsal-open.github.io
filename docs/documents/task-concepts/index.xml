@@ -1,13 +1,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>rehearsal – タスクの概念を知る</title>
-    <link>/documents/task-concepts/</link>
+    <link>https://rehearsal-open.github.io/documents/task-concepts/</link>
     <description>Recent content in タスクの概念を知る on rehearsal</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <lastBuildDate>Thu, 09 Sep 2021 16:48:06 +0900</lastBuildDate>
     
-	  <atom:link href="/documents/task-concepts/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="https://rehearsal-open.github.io/documents/task-concepts/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -17,10 +17,10 @@
     
     <item>
       <title>Documents: タスクの実行順序を知る</title>
-      <link>/documents/task-concepts/process-and-task/</link>
+      <link>https://rehearsal-open.github.io/documents/task-concepts/process-and-task/</link>
       <pubDate>Thu, 09 Sep 2021 17:45:12 +0900</pubDate>
       
-      <guid>/documents/task-concepts/process-and-task/</guid>
+      <guid>https://rehearsal-open.github.io/documents/task-concepts/process-and-task/</guid>
       <description>
         
         
@@ -136,15 +136,15 @@ Login--&amp;gt;Log
     
     <item>
       <title>Documents: フェイズとタスク</title>
-      <link>/documents/task-concepts/phase-and-task/</link>
+      <link>https://rehearsal-open.github.io/documents/task-concepts/phase-and-task/</link>
       <pubDate>Thu, 09 Sep 2021 17:42:11 +0900</pubDate>
       
-      <guid>/documents/task-concepts/phase-and-task/</guid>
+      <guid>https://rehearsal-open.github.io/documents/task-concepts/phase-and-task/</guid>
       <description>
         
         
         &lt;h2 id=&#34;phase-concept&#34;&gt;タスク間の依存関係&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;/documents/task-concepts/process-and-task&#34;&gt;ドキュメント「プロセスとタスク」&lt;/a&gt;でも解説した通り、rehearsalのタスクは並列的に実行されます。これは各タスクの入出力をリアルタイムに同期させる意味では理想的な状態です。しかし、現実では以下のような不都合を生じることがあります。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://rehearsal-open.github.io/documents/task-concepts/process-and-task&#34;&gt;ドキュメント「プロセスとタスク」&lt;/a&gt;でも解説した通り、rehearsalのタスクは並列的に実行されます。これは各タスクの入出力をリアルタイムに同期させる意味では理想的な状態です。しかし、現実では以下のような不都合を生じることがあります。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;他のタスクに依存する場合
 &lt;ul&gt;

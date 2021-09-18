@@ -1,13 +1,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>rehearsal – 環境構築</title>
-    <link>/getting-started/environments/</link>
+    <link>https://rehearsal-open.github.io/getting-started/environments/</link>
     <description>Recent content in 環境構築 on rehearsal</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <lastBuildDate>Fri, 03 Sep 2021 13:47:49 +0900</lastBuildDate>
     
-	  <atom:link href="/getting-started/environments/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="https://rehearsal-open.github.io/getting-started/environments/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -17,10 +17,10 @@
     
     <item>
       <title>Getting-Started: Getting Startedで使用するツールについて</title>
-      <link>/getting-started/environments/for-getting-started/</link>
+      <link>https://rehearsal-open.github.io/getting-started/environments/for-getting-started/</link>
       <pubDate>Fri, 03 Sep 2021 14:17:37 +0900</pubDate>
       
-      <guid>/getting-started/environments/for-getting-started/</guid>
+      <guid>https://rehearsal-open.github.io/getting-started/environments/for-getting-started/</guid>
       <description>
         
         

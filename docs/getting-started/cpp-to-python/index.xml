@@ -1,13 +1,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>rehearsal – Cpp to Python</title>
-    <link>/getting-started/cpp-to-python/</link>
+    <link>https://rehearsal-open.github.io/getting-started/cpp-to-python/</link>
     <description>Recent content in Cpp to Python on rehearsal</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <lastBuildDate>Fri, 03 Sep 2021 15:30:18 +0900</lastBuildDate>
     
-	  <atom:link href="/getting-started/cpp-to-python/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="https://rehearsal-open.github.io/getting-started/cpp-to-python/index.xml" rel="self" type="application/rss+xml" />
     
     
       
