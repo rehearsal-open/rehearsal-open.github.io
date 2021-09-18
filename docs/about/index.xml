@@ -1,13 +1,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>rehearsal – rehearsalについて</title>
-    <link>./about/</link>
+    <link>/about/</link>
     <description>Recent content in rehearsalについて on rehearsal</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <lastBuildDate>Mon, 30 Aug 2021 13:43:38 +0900</lastBuildDate>
     
-	  <atom:link href="./about/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="/about/index.xml" rel="self" type="application/rss+xml" />
     
     
       
