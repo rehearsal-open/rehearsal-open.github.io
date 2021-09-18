@@ -1,7 +1,21 @@
+html, body, aside {
+    scrollbar-color: $primary $secondary !important;
+    scrollbar-width: auto !important;
+    &::-webkit-scrollbar {
+        width: 5px;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: $secondary;
+        border-radius: 100px;
+    }
+    &::-webkit-scrollbar-track {
+        background-color: $primary;
+    }
+}
 a, .btn, .ptn-primary, .ptn-secondary {
     transition: 0.5s;
 }
-.td-section{
+.td-section, .td-page{
     .td-main{
         a {
             color: $primary !important;
@@ -12,6 +26,13 @@ a, .btn, .ptn-primary, .ptn-secondary {
         main {
             a {
                 font-weight: bold;
+            }
+        }    
+        aside {
+            right: 10px;
+            padding-left: 20px;
+            &::-webkit-scrollbar-track {
+                border-radius: 100px;
             }
         }
         #TableOfContents {
