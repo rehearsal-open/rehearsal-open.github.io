@@ -7,10 +7,10 @@ type: docs
 
 　rehearsalは **「言語・デバイス・目的の壁を越えて」** をコンセプトに開発されているので、本来は自分の普段使用している言語・環境で実践するべきだと考えています。
 
-しかし、残念ながら何らかの言語を用いてGetting Startedを書かなければいけません。このGetting Startedでは、主に基本的なPythonの標準入出力のみを使用して進めていくので基本的な部分を確認します。
+しかし、残念ながら何らかの言語を用いてGetting Startedを書かなければいけません。このGetting Startedでは、主にC++とPythonの基本的な標準入出力のみを使用して進めていくので基本的な部分を確認します。
 
-## インストール
-### Python
+## インストール{#install}
+### Python{#install-python}
 　すでにPython環境があるかどうかを確認し、ない場合はインストールを行ってください。任意のディレクトリでターミナル（`bash` , `powershell` , `cmd` など）を開き、以下のコマンドを実行します（バージョンによって表示内容は異なる場合があります）。
 ```sh
 $ python --version
@@ -18,7 +18,7 @@ Python 3.9.5
 ```
 ダウンロードは[公式](https://www.python.org/downloads/)より配布されている物がよいでしょう。
 
-### C++(gcc)
+### C++(gcc){#install-gcc}
 　すでにC++環境があるかどうかを確認し、ない場合はインストールを行ってください。
 任意のディレクトリでターミナル（`bash` , `powershell` , `cmd` など）を開き、以下のコマンドを実行します（バージョンなど、各環境によって表示内容は異なる場合があります）。
 ```sh
@@ -34,16 +34,18 @@ gcc version 10.3.0 (Rev2, Built by MSYS2 project)
 ```
 ダウンロードはlinux仮想環境をインストールして同梱のものを用いるか、WindowsであればMSYS2を使用してgccをインストールするのがよいでしょう。
 
-## 標準入出力
-### Python
+## 標準入出力{#stdio}
+### 全般的に言えること{#stdio-generally_speaking}
+- 出力側のテキストに関して`flush`を行うようにしてください。これが記述されていない場合、最後まで読み取れない恐れがあります。
+### Python{#stdio-python}
 　Pythonの標準入出力系の関数を確認します。 rehearsalのGetting Startedで使用する関数は **2個** しかありません。これはどれだけ複雑な組み合わせをしていても変わりません。
 ```python
 str s
-input(s)                     # 標準入力
-println("Hello World, " + s) # 標準出力・標準エラー出力（改行含む）
+input(s)                                    # 標準入力
+print("Hello World, " + s, flush=True)    # 標準出力・標準エラー出力（改行含む）
 ```
-`input()`, `print()` はどちらも言語に組み込まれている関数で、それぞれ標準入力からのデータ取得、標準出力への書き込みを行います。
-### C++
+`input()`, `print()` はどちらも言語に組み込まれている関数で、それぞれ標準入力からのデータ取得、標準出力への書き込みを行います。出力する際には`flush=True`とするべきです。
+### C++{#stdio-cpp}
 　C++の標準入出力系の関数を確認します。rehearsalのGetting Startedで使用する関数は **2個** しかありません。
 ```c++
 #include <bits/stdc++.h>
@@ -51,14 +53,14 @@ using namespace std;
 
 int main() {
     string s;
-    cin >> s;                               // 標準入力
-    cout << "Hello World, " + s << endl;    // 標準出力（改行含む）
-    cerr << "OK" << endl;                   // 標準エラー出力（改行を含む、今回は使用しない）
+    cin >> s;                                       // 標準入力
+    cout << "Hello World, " + s << flush <<  endl;  // 標準出力（改行含む）
+    cerr << "OK" << flush << endl;                  // 標準エラー出力（改行を含む、今回は使用しない）
     return 0;
 }
 ```
 
 これらに相当する関数は各言語ある（と思っている）ので、Python以外を使用する方はそれらを利用してください。ただし、言語に組み込まれている関数の中には、Go言語の [`(builtin).print()`](https://pkg.go.dev/builtin#print) 関数など、標準エラー出力に書き込む関数もあるためその確認もしておくとよいでしょう。
 
-## テキストエンコーディングについて
+## テキストエンコーディングについて{#encoding}
 　残念ながら、開発者の力不足により異種のエンコーディングをrehearsal内部で変換する実装が行えていません。rehearsalとしては、一般的なutf-8の使用を推奨しています。
