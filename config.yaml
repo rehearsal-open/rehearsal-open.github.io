@@ -78,9 +78,6 @@ params:
   images: 
   - /image/image.jpg
 
-  # google custom search engine id
-  algolia_docsearch: true # todo: Enable Algolia: https://www.docsy.dev/docs/adding-content/navigation/#adding-algolia-docsearch
-
   # enable syntax highlighting and copy buttons code blocks with Prism
   prism_syntax_highlighting: false
 
