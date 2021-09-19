@@ -70,8 +70,8 @@ params:
   copyright: rehearsal author, Kasai Koji
   version_menu: Releases
   archived_version: false
-  version: 1.202109
-  url_latest_version: https://github.com/rehearsal-open/rehearsal/releases/tag/1.202109
+  version: 1.202109.1
+  url_latest_version: https://github.com/rehearsal-open/rehearsal/releases/tag/1.202109.1
   github_project_repo: https://github.com/rehearsal-open/rehearsal
   time_format_blog: "Monday, January 02, 2006"
   time_format_default: "January 02, 2006"
