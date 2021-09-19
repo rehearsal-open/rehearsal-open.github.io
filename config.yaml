@@ -20,11 +20,6 @@ pygmentsUseClassic: false
 pygmentsOptions: linenos=table
 pygmentsStyle: native
 
-# Twitter card image
-description: rehearsalは世界でもっとも自由度のあるテスト環境、クリエイティブな開発環境を提供します。
-images: 
-- image/image.png
-
 # url configuration
 permalinks:
   blog: "/:section/:year/:month/:day/:slug/"
@@ -77,6 +72,11 @@ params:
   time_format_default: "January 02, 2006"
 
   rss_sections: ["blog"]
+
+  # Twitter card image
+  description: rehearsalは世界でもっとも自由度のあるテスト環境、クリエイティブな開発環境を提供します。
+  images: 
+  - /image/image.jpg
 
   # google custom search engine id
   algolia_docsearch: true # todo: Enable Algolia: https://www.docsy.dev/docs/adding-content/navigation/#adding-algolia-docsearch

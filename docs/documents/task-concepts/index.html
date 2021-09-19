@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.89.0-DEV" /><link rel="alternate" type="application/rss&#43;xml" href="https://rehearsal-open.github.io/documents/task-concepts/index.xml">
+<meta name="generator" content="Hugo 0.88.0-DEV" /><link rel="alternate" type="application/rss&#43;xml" href="https://rehearsal-open.github.io/documents/task-concepts/index.xml">
 <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
 <link rel="shortcut icon" type="image/png" href=" /favicons/logo.png ">
 <title>タスクの概念を知る | rehearsal</title>
@@ -13,10 +13,12 @@
 <meta property="og:title" content="タスクの概念を知る" />
 <meta property="og:description" content="rehearsalでは、TCP通信を使用するプロセスや内部でアプリケーションを実行するプロセスをそれぞれ一つの「タスク」という単位で分割し、実行および入出力の監視を行っています。この章ではrehearsal内部におけるタスクの管理、監視、実行のプロセスを紹介します。" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://rehearsal-open.github.io/documents/task-concepts/" />
+<meta property="og:url" content="https://rehearsal-open.github.io/documents/task-concepts/" /><meta property="og:image" content="https://rehearsal-open.github.io/image/image.jpg"/>
 
 <meta itemprop="name" content="タスクの概念を知る">
-<meta itemprop="description" content="rehearsalでは、TCP通信を使用するプロセスや内部でアプリケーションを実行するプロセスをそれぞれ一つの「タスク」という単位で分割し、実行および入出力の監視を行っています。この章ではrehearsal内部におけるタスクの管理、監視、実行のプロセスを紹介します。"><meta name="twitter:card" content="summary"/>
+<meta itemprop="description" content="rehearsalでは、TCP通信を使用するプロセスや内部でアプリケーションを実行するプロセスをそれぞれ一つの「タスク」という単位で分割し、実行および入出力の監視を行っています。この章ではrehearsal内部におけるタスクの管理、監視、実行のプロセスを紹介します。"><meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://rehearsal-open.github.io/image/image.jpg"/>
+
 <meta name="twitter:title" content="タスクの概念を知る"/>
 <meta name="twitter:description" content="rehearsalでは、TCP通信を使用するプロセスや内部でアプリケーションを実行するプロセスをそれぞれ一つの「タスク」という単位で分割し、実行および入出力の監視を行っています。この章ではrehearsal内部におけるタスクの管理、監視、実行のプロセスを紹介します。"/>
 
@@ -362,7 +364,7 @@
 	<h2 id="what_is_rehearsal">rehearsalとは？</h2>
 <p><a href="/about/#about">「rehearsalについて（about）」</a>でも述べたように、rehearsalは自らの定義を「プロセスリレーションツール」と位置づけています。具体的には、各プロセス間の入出力を監視し、「任意の形式」に変換したうえで出力をほかのプロセスの入力として与えます。任意の形式には標準入出力、シリアル通信、TCP通信などが含まれており、rehearsalは内部で相互変換を行い、任意のプロセスに入力データとして与えます。</p>
 <p>以下は標準入出力を使用するプログラムを用いた場合のイメージ図です。</p>
-<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">graph TD
+<pre><code class="language-mermaid" data-lang="mermaid">graph TD
     reciever([受信モジュール])
     sender([送信モジュール])
 
