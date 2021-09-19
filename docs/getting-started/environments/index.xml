@@ -25,9 +25,9 @@
         
         
         &lt;p&gt;　rehearsalは &lt;strong&gt;「言語・デバイス・目的の壁を越えて」&lt;/strong&gt; をコンセプトに開発されているので、本来は自分の普段使用している言語・環境で実践するべきだと考えています。&lt;/p&gt;
-&lt;p&gt;しかし、残念ながら何らかの言語を用いてGetting Startedを書かなければいけません。このGetting Startedでは、主に基本的なPythonの標準入出力のみを使用して進めていくので基本的な部分を確認します。&lt;/p&gt;
-&lt;h2 id=&#34;インストール&#34;&gt;インストール&lt;/h2&gt;
-&lt;h3 id=&#34;python&#34;&gt;Python&lt;/h3&gt;
+&lt;p&gt;しかし、残念ながら何らかの言語を用いてGetting Startedを書かなければいけません。このGetting Startedでは、主にC++とPythonの基本的な標準入出力のみを使用して進めていくので基本的な部分を確認します。&lt;/p&gt;
+&lt;h2 id=&#34;install&#34;&gt;インストール&lt;/h2&gt;
+&lt;h3 id=&#34;install-python&#34;&gt;Python&lt;/h3&gt;
 &lt;p&gt;　すでにPython環境があるかどうかを確認し、ない場合はインストールを行ってください。任意のディレクトリでターミナル（&lt;code&gt;bash&lt;/code&gt; , &lt;code&gt;powershell&lt;/code&gt; , &lt;code&gt;cmd&lt;/code&gt; など）を開き、以下のコマンドを実行します（バージョンによって表示内容は異なる場合があります）。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;
 &lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
@@ -40,7 +40,7 @@ Python 3.9.5
 &lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;ダウンロードは&lt;a href=&#34;https://www.python.org/downloads/&#34;&gt;公式&lt;/a&gt;より配布されている物がよいでしょう。&lt;/p&gt;
-&lt;h3 id=&#34;cgcc&#34;&gt;C++(gcc)&lt;/h3&gt;
+&lt;h3 id=&#34;install-gcc&#34;&gt;C++(gcc)&lt;/h3&gt;
 &lt;p&gt;　すでにC++環境があるかどうかを確認し、ない場合はインストールを行ってください。
 任意のディレクトリでターミナル（&lt;code&gt;bash&lt;/code&gt; , &lt;code&gt;powershell&lt;/code&gt; , &lt;code&gt;cmd&lt;/code&gt; など）を開き、以下のコマンドを実行します（バージョンなど、各環境によって表示内容は異なる場合があります）。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;
@@ -68,8 +68,12 @@ gcc version 10.3.0 (Rev2, Built by MSYS2 project)
 &lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;ダウンロードはlinux仮想環境をインストールして同梱のものを用いるか、WindowsであればMSYS2を使用してgccをインストールするのがよいでしょう。&lt;/p&gt;
-&lt;h2 id=&#34;標準入出力&#34;&gt;標準入出力&lt;/h2&gt;
-&lt;h3 id=&#34;python-1&#34;&gt;Python&lt;/h3&gt;
+&lt;h2 id=&#34;stdio&#34;&gt;標準入出力&lt;/h2&gt;
+&lt;h3 id=&#34;stdio-generally_speaking&#34;&gt;全般的に言えること&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;出力側のテキストに関して&lt;code&gt;flush&lt;/code&gt;を行うようにしてください。これが記述されていない場合、最後まで読み取れない恐れがあります。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;stdio-python&#34;&gt;Python&lt;/h3&gt;
 &lt;p&gt;　Pythonの標準入出力系の関数を確認します。 rehearsalのGetting Startedで使用する関数は &lt;strong&gt;2個&lt;/strong&gt; しかありません。これはどれだけ複雑な組み合わせをしていても変わりません。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;
 &lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
@@ -79,12 +83,12 @@ gcc version 10.3.0 (Rev2, Built by MSYS2 project)
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;;width:100%&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; style=&#34;color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#24909d&#34;&gt;str&lt;/span&gt; s
-&lt;span style=&#34;color:#24909d&#34;&gt;input&lt;/span&gt;(s)                     &lt;span style=&#34;color:#999;font-style:italic&#34;&gt;# 標準入力&lt;/span&gt;
-println(&lt;span style=&#34;color:#ed9d13&#34;&gt;&amp;#34;Hello World, &amp;#34;&lt;/span&gt; + s) &lt;span style=&#34;color:#999;font-style:italic&#34;&gt;# 標準出力・標準エラー出力（改行含む）&lt;/span&gt;
+&lt;span style=&#34;color:#24909d&#34;&gt;input&lt;/span&gt;(s)                                    &lt;span style=&#34;color:#999;font-style:italic&#34;&gt;# 標準入力&lt;/span&gt;
+&lt;span style=&#34;color:#24909d&#34;&gt;print&lt;/span&gt;(&lt;span style=&#34;color:#ed9d13&#34;&gt;&amp;#34;Hello World, &amp;#34;&lt;/span&gt; + s, flush=&lt;span style=&#34;color:#6ab825;font-weight:bold&#34;&gt;True&lt;/span&gt;)    &lt;span style=&#34;color:#999;font-style:italic&#34;&gt;# 標準出力・標準エラー出力（改行含む）&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;code&gt;input()&lt;/code&gt;, &lt;code&gt;print()&lt;/code&gt; はどちらも言語に組み込まれている関数で、それぞれ標準入力からのデータ取得、標準出力への書き込みを行います。&lt;/p&gt;
-&lt;h3 id=&#34;c&#34;&gt;C++&lt;/h3&gt;
+&lt;/div&gt;&lt;p&gt;&lt;code&gt;input()&lt;/code&gt;, &lt;code&gt;print()&lt;/code&gt; はどちらも言語に組み込まれている関数で、それぞれ標準入力からのデータ取得、標準出力への書き込みを行います。出力する際には&lt;code&gt;flush=True&lt;/code&gt;とするべきです。&lt;/p&gt;
+&lt;h3 id=&#34;stdio-cpp&#34;&gt;C++&lt;/h3&gt;
 &lt;p&gt;　C++の標準入出力系の関数を確認します。rehearsalのGetting Startedで使用する関数は &lt;strong&gt;2個&lt;/strong&gt; しかありません。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;
 &lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
@@ -105,15 +109,15 @@ println(&lt;span style=&#34;color:#ed9d13&#34;&gt;&amp;#34;Hello World, &amp;#34
 
 &lt;span style=&#34;color:#6ab825;font-weight:bold&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#447fcf&#34;&gt;main&lt;/span&gt;() {
     string s;
-    cin &amp;gt;&amp;gt; s;                               &lt;span style=&#34;color:#999;font-style:italic&#34;&gt;// 標準入力
-&lt;/span&gt;&lt;span style=&#34;color:#999;font-style:italic&#34;&gt;&lt;/span&gt;    cout &amp;lt;&amp;lt; &lt;span style=&#34;color:#ed9d13&#34;&gt;&amp;#34;Hello World, &amp;#34;&lt;/span&gt; + s &amp;lt;&amp;lt; endl;    &lt;span style=&#34;color:#999;font-style:italic&#34;&gt;// 標準出力（改行含む）
-&lt;/span&gt;&lt;span style=&#34;color:#999;font-style:italic&#34;&gt;&lt;/span&gt;    cerr &amp;lt;&amp;lt; &lt;span style=&#34;color:#ed9d13&#34;&gt;&amp;#34;OK&amp;#34;&lt;/span&gt; &amp;lt;&amp;lt; endl;                   &lt;span style=&#34;color:#999;font-style:italic&#34;&gt;// 標準エラー出力（改行を含む、今回は使用しない）
+    cin &amp;gt;&amp;gt; s;                                       &lt;span style=&#34;color:#999;font-style:italic&#34;&gt;// 標準入力
+&lt;/span&gt;&lt;span style=&#34;color:#999;font-style:italic&#34;&gt;&lt;/span&gt;    cout &amp;lt;&amp;lt; &lt;span style=&#34;color:#ed9d13&#34;&gt;&amp;#34;Hello World, &amp;#34;&lt;/span&gt; + s &amp;lt;&amp;lt; flush &amp;lt;&amp;lt;  endl;  &lt;span style=&#34;color:#999;font-style:italic&#34;&gt;// 標準出力（改行含む）
+&lt;/span&gt;&lt;span style=&#34;color:#999;font-style:italic&#34;&gt;&lt;/span&gt;    cerr &amp;lt;&amp;lt; &lt;span style=&#34;color:#ed9d13&#34;&gt;&amp;#34;OK&amp;#34;&lt;/span&gt; &amp;lt;&amp;lt; flush &amp;lt;&amp;lt; endl;                  &lt;span style=&#34;color:#999;font-style:italic&#34;&gt;// 標準エラー出力（改行を含む、今回は使用しない）
 &lt;/span&gt;&lt;span style=&#34;color:#999;font-style:italic&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#6ab825;font-weight:bold&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#3677a9&#34;&gt;0&lt;/span&gt;;
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;これらに相当する関数は各言語ある（と思っている）ので、Python以外を使用する方はそれらを利用してください。ただし、言語に組み込まれている関数の中には、Go言語の &lt;a href=&#34;https://pkg.go.dev/builtin#print&#34;&gt;&lt;code&gt;(builtin).print()&lt;/code&gt;&lt;/a&gt; 関数など、標準エラー出力に書き込む関数もあるためその確認もしておくとよいでしょう。&lt;/p&gt;
-&lt;h2 id=&#34;テキストエンコーディングについて&#34;&gt;テキストエンコーディングについて&lt;/h2&gt;
+&lt;h2 id=&#34;encoding&#34;&gt;テキストエンコーディングについて&lt;/h2&gt;
 &lt;p&gt;　残念ながら、開発者の力不足により異種のエンコーディングをrehearsal内部で変換する実装が行えていません。rehearsalとしては、一般的なutf-8の使用を推奨しています。&lt;/p&gt;
 
       </description>

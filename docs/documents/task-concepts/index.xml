@@ -60,7 +60,7 @@
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;この場合、以下のように連携を&lt;strong&gt;非同期に&lt;/strong&gt;行います。&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-mermaid&#34; data-lang=&#34;mermaid&#34;&gt;graph TB
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-mermaid&#34; data-lang=&#34;mermaid&#34;&gt;graph TB
 
 subgraph TaskA
     Ain[rehearsal入力クエリ]
@@ -110,7 +110,7 @@ B--stdout--&amp;gt;Bout-.クエリに書き込み.-&amp;gt;Ain
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;この場合、rehearsalは内部にログ生成用のタスクを用意し、その標準入力に各タスクの標準出力を接続するので以下のようなプロセスを組むことになります。&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-mermaid&#34; data-lang=&#34;mermaid&#34;&gt;graph TB
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-mermaid&#34; data-lang=&#34;mermaid&#34;&gt;graph TB
 
 subgraph TaskA
     Ain[rehearsal入力クエリ]
@@ -188,7 +188,7 @@ Login--&amp;gt;Log
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;&lt;code&gt;(1)&lt;/code&gt;と&lt;code&gt;(2)&lt;/code&gt;は同一名ですがrehearsal内部では別名として定義され、それぞれ&lt;code&gt;phase1::task&lt;/code&gt;と&lt;code&gt;phase2::task&lt;/code&gt;として定義されます。これらの命名は&lt;code&gt;sendto&lt;/code&gt;プロパティで送信先のタスクを指定する際に使用できます。&lt;/p&gt;
 &lt;p&gt;この例では以下のような実行フローとなります。&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-mermaid&#34; data-lang=&#34;mermaid&#34;&gt;flowchart TB
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-mermaid&#34; data-lang=&#34;mermaid&#34;&gt;flowchart TB
   Begins[rehearsal実行開始]
   Ends[rehearsal実行終了]
   Task1Begins[タスク1実行開始] .-&amp;gt; Task1Waits[タスク1終了待機] .-&amp;gt; Task1Ends[タスク1実行終了]
@@ -257,7 +257,7 @@ Login--&amp;gt;Log
 &lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#6ab825;font-weight:bold&#34;&gt;wait&lt;/span&gt;:&lt;span style=&#34;color:#666&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#6ab825;font-weight:bold&#34;&gt;true&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;pre&gt;&lt;code class=&#34;language-mermaid&#34; data-lang=&#34;mermaid&#34;&gt;flowchart LR
+&lt;/div&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-mermaid&#34; data-lang=&#34;mermaid&#34;&gt;flowchart LR
   Begins[rehearsal実行開始]
   Ends[rehearsal実行終了]
   Begins --&amp;gt; Phase1 --&amp;gt; Phase2 --&amp;gt; Finalize --&amp;gt; Ends

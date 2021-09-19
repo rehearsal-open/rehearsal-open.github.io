@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.88.0-DEV" /><META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
+<meta name="generator" content="Hugo 0.89.0-DEV" /><META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
 <link rel="shortcut icon" type="image/png" href=" /favicons/logo.png ">
 <title>タスクの実行順序を知る | rehearsal</title>
 
@@ -422,7 +422,7 @@
 </span></code></pre></td></tr></table>
 </div>
 </div><p>この場合、以下のように連携を<strong>非同期に</strong>行います。</p>
-<pre><code class="language-mermaid" data-lang="mermaid">graph TB
+<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">graph TB
 
 subgraph TaskA
     Ain[rehearsal入力クエリ]
@@ -472,7 +472,7 @@ B--stdout--&gt;Bout-.クエリに書き込み.-&gt;Ain
 </span></code></pre></td></tr></table>
 </div>
 </div><p>この場合、rehearsalは内部にログ生成用のタスクを用意し、その標準入力に各タスクの標準出力を接続するので以下のようなプロセスを組むことになります。</p>
-<pre><code class="language-mermaid" data-lang="mermaid">graph TB
+<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">graph TB
 
 subgraph TaskA
     Ain[rehearsal入力クエリ]

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.88.0-DEV" /><link rel="alternate" type="application/rss&#43;xml" href="https://rehearsal-open.github.io/getting-started/cpp-to-python/index.xml">
+<meta name="generator" content="Hugo 0.89.0-DEV" /><link rel="alternate" type="application/rss&#43;xml" href="https://rehearsal-open.github.io/getting-started/cpp-to-python/index.xml">
 <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
 <link rel="shortcut icon" type="image/png" href=" /favicons/logo.png ">
 <title>Cpp to Python | rehearsal</title>
@@ -277,6 +277,20 @@
             
 
 
+<div class="td-toc"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#code">コーディング</a>
+      <ul>
+        <li><a href="#code-answer_cpp">./answer.cpp</a></li>
+        <li><a href="#code-quiz_py">./quiz.py</a></li>
+        <li><a href="#code-rehearsal_yml">./rehearsal.yml</a></li>
+      </ul>
+    </li>
+    <li><a href="#run">実行</a></li>
+    <li><a href="#ended">これが終わったら？</a></li>
+  </ul>
+</nav></div>
+
 
 
             
@@ -346,54 +360,328 @@
 			
 		
 		
-			<p class="reading-time"><i class="fa fa-clock" aria-hidden="true"></i> 1 minute read</p>
+			<p class="reading-time"><i class="fa fa-clock" aria-hidden="true"></i> 3 minute read</p>
 
 		
 	</header>
-	<p>　Getting StartedではC++で書かれた回答プログラムを、別のPythonで書かれた問題プログラムを用いて対話的なプログラムのテストを行います。</p>
-<h1 id="問題">問題</h1>
-<p>　問題は以下の通りです。</p>
-<div class="highlight"><div style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">8
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">目標：回答プログラムが問題プログラムが持つキーを見つけることです。
-
-<span style="color:#6ab825;font-weight:bold">0.</span> 問題プログラムは数字のみで作られた[1-10桁]のキーを作成します。
-<span style="color:#6ab825;font-weight:bold">1.</span> はじめに問題プログラムはキーの桁数を出力し、改行します。
-<span style="color:#6ab825;font-weight:bold">2.</span> 回答プログラムはキーを推測、推測したうちの一つを出力し、改行します。
-<span style="color:#6ab825;font-weight:bold">3.</span> 問題プログラムは回答プログラムから受け取ったキーと
-    正解のキーを比較して一致している桁数を出力し、改行します。
-<span style="color:#6ab825;font-weight:bold">4.</span> 回答プログラムが正答を出すまで[2-3]を繰り返します。
-</code></pre></td></tr></table>
-</div>
-</div><h1 id="コーディング">コーディング</h1>
+	<p>Getting Startedでは、C++とPythonの四則演算について考えることにします。
+Pythonが</p>
+<pre tabindex="0"><code>&lt;整数&gt; &lt;演算子&gt; &lt;整数&gt;
+</code></pre><p>と出力するので、その結果をC++のプログラムに</p>
+<pre tabindex="0"><code>&lt;計算結果&gt;
+</code></pre><p>という形で答えてもらいます。
+このソースコードは<a href="https://github.com/rehearsal-open/template-sample/tree/main/getting-started">github.com/rehearsal-open/template-sample/getting-started</a>に公開しています。</p>
+<h2 id="code">コーディング</h2>
 <p>それでは、実際にコードを書いていきましょう。下図のようなファイル構成です。</p>
 <div class="highlight"><div style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">1
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">2
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">4
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">./
- ┣ questioner.py
- ┣ solver.cpp
- ┗ rehearsal.yaml
+<pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md"> ┣ answer.cpp
+ ┣ quiz.py
+ ┗ rehearsal.yml
 </code></pre></td></tr></table>
 </div>
 </div><p>ひとつずつファイル構成を見てみましょう</p>
-<h2 id="questionerpy">questioner.py</h2>
-<p>問題を生成するファイルです。</p>
+<h3 id="code-answer_cpp">./answer.cpp</h3>
+<p>C++側のコードです。単純に入力を受け取り、計算結果を出力しています。わざと間違えるように<code>int</code>型でのみ計算を行います。</p>
+<div class="highlight"><div style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">19
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">20
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">21
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">22
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">23
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">24
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">25
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#999;font-style:italic">// ./answer.cpp
+</span><span style="color:#999;font-style:italic"></span>
+<span style="color:#cd2828;font-weight:bold">#include</span> <span style="color:#cd2828;font-weight:bold">&lt;iostream&gt;</span><span style="color:#cd2828;font-weight:bold">
+</span><span style="color:#cd2828;font-weight:bold">#include</span> <span style="color:#cd2828;font-weight:bold">&lt;string&gt;</span><span style="color:#cd2828;font-weight:bold">
+</span><span style="color:#cd2828;font-weight:bold"></span><span style="color:#6ab825;font-weight:bold">using</span> <span style="color:#6ab825;font-weight:bold">namespace</span> std;
+
+<span style="color:#6ab825;font-weight:bold">int</span> <span style="color:#447fcf">main</span>() {
+
+    <span style="color:#6ab825;font-weight:bold">for</span> (<span style="color:#6ab825;font-weight:bold">auto</span> i = <span style="color:#3677a9">0</span>; i &lt; <span style="color:#3677a9">1000</span>; i++) {
+        <span style="color:#6ab825;font-weight:bold">int</span> a, b;
+        string ope;
+
+        <span style="color:#999;font-style:italic">// input line to get question
+</span><span style="color:#999;font-style:italic"></span>        cin &gt;&gt; a &gt;&gt; ope &gt;&gt; b;
+
+        <span style="color:#999;font-style:italic">// output answer
+</span><span style="color:#999;font-style:italic"></span>        <span style="color:#6ab825;font-weight:bold">switch</span> (ope[<span style="color:#3677a9">0</span>]) {
+        <span style="color:#6ab825;font-weight:bold">case</span> <span style="color:#ed9d13">&#39;+&#39;</span>: cout &lt;&lt; a + b &lt;&lt; flush &lt;&lt; endl; <span style="color:#6ab825;font-weight:bold">break</span>;
+        <span style="color:#6ab825;font-weight:bold">case</span> <span style="color:#ed9d13">&#39;-&#39;</span>: cout &lt;&lt; a - b &lt;&lt; flush &lt;&lt; endl; <span style="color:#6ab825;font-weight:bold">break</span>;
+        <span style="color:#6ab825;font-weight:bold">case</span> <span style="color:#ed9d13">&#39;*&#39;</span>: cout &lt;&lt; a * b &lt;&lt; flush &lt;&lt; endl; <span style="color:#6ab825;font-weight:bold">break</span>;
+        <span style="color:#6ab825;font-weight:bold">case</span> <span style="color:#ed9d13">&#39;/&#39;</span>: cout &lt;&lt; a / b &lt;&lt; flush &lt;&lt; endl; <span style="color:#6ab825;font-weight:bold">break</span>;
+        <span style="color:#6ab825;font-weight:bold">case</span> <span style="color:#ed9d13">&#39;%&#39;</span>: cout &lt;&lt; a % b &lt;&lt; flush &lt;&lt; endl; <span style="color:#6ab825;font-weight:bold">break</span>;
+        }
+    }
+}
+</code></pre></td></tr></table>
+</div>
+</div><p>このコードを実行した場合、1000問出題する必要があるため、とても手動では行うことができません。</p>
+<h3 id="code-quiz_py">./quiz.py</h3>
+<p>Python側のコードです。問題を作成し、出力、Pythonとしての答えを計算してからC++の回答を取得し、それらを最後に一覧として表示します。確認のためにPythonのファイル出力でも最後の一覧を出力しておきます。</p>
+<div class="highlight"><div style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">19
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">20
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">21
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">22
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">23
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">24
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">25
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">26
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">27
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">28
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">29
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">30
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">31
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">32
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">33
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">34
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">35
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">36
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">37
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">38
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">39
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">40
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">41
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">42
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">43
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">44
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+<span style="color:#999;font-style:italic"># ./quiz.py</span>
+
+<span style="color:#6ab825;font-weight:bold">import</span> <span style="color:#447fcf;text-decoration:underline">random</span>
+
+nQuiz = <span style="color:#3677a9">1000</span>
+data = []
+
+f = <span style="color:#24909d">open</span>(file=<span style="color:#ed9d13">&#34;out.txt&#34;</span>, mode=<span style="color:#ed9d13">&#39;w&#39;</span>)
+
+<span style="color:#6ab825;font-weight:bold">for</span> i <span style="color:#6ab825;font-weight:bold">in</span> <span style="color:#24909d">range</span>(nQuiz):
+    
+    <span style="color:#999;font-style:italic"># make quiz</span>
+    first = random.choice(<span style="color:#24909d">range</span>(<span style="color:#3677a9">1</span>, <span style="color:#3677a9">100000</span>))
+    second = random.choice(<span style="color:#24909d">range</span>(<span style="color:#3677a9">1</span>, <span style="color:#3677a9">100000</span>))
+    operator = random.choice([<span style="color:#ed9d13">&#34;+&#34;</span>, <span style="color:#ed9d13">&#34;-&#34;</span>, <span style="color:#ed9d13">&#34;*&#34;</span>, <span style="color:#ed9d13">&#34;/&#34;</span>, <span style="color:#ed9d13">&#34;%&#34;</span>])
+
+    <span style="color:#999;font-style:italic"># please flush property true</span>
+    <span style="color:#24909d">print</span>(first, operator, second, sep=<span style="color:#ed9d13">&#34; &#34;</span>, flush=<span style="color:#6ab825;font-weight:bold">True</span>)
+
+    <span style="color:#999;font-style:italic"># get python&#39;s answer</span>
+    pyAns = <span style="color:#3677a9">0</span>
+    <span style="color:#6ab825;font-weight:bold">if</span> operator == <span style="color:#ed9d13">&#34;+&#34;</span>:
+        pyAns = first + second
+    <span style="color:#6ab825;font-weight:bold">if</span> operator == <span style="color:#ed9d13">&#34;-&#34;</span>:
+        pyAns = first - second
+    <span style="color:#6ab825;font-weight:bold">if</span> operator == <span style="color:#ed9d13">&#34;*&#34;</span>:
+        pyAns = first * second
+    <span style="color:#6ab825;font-weight:bold">if</span> operator == <span style="color:#ed9d13">&#34;/&#34;</span>:
+        pyAns = first / second
+    <span style="color:#6ab825;font-weight:bold">if</span> operator == <span style="color:#ed9d13">&#34;%&#34;</span>:
+        pyAns = first % second
+
+    <span style="color:#999;font-style:italic"># get c++&#39;s answer</span>
+    cppAns = <span style="color:#24909d">input</span>()
+
+    <span style="color:#999;font-style:italic"># compare with table</span>
+    data.append([first, operator, second, pyAns, cppAns])
+
+<span style="color:#6ab825;font-weight:bold">for</span> i <span style="color:#6ab825;font-weight:bold">in</span> <span style="color:#24909d">range</span>(nQuiz):
+    first, operator, second, pyAns, cppAns = data[i][<span style="color:#3677a9">0</span>], data[i][<span style="color:#3677a9">1</span>], data[i][<span style="color:#3677a9">2</span>], data[i][<span style="color:#3677a9">3</span>], data[i][<span style="color:#3677a9">4</span>]
+    <span style="color:#999;font-style:italic"># please flush property true</span>
+    <span style="color:#24909d">print</span>(<span style="color:#24909d">str</span>(first)+<span style="color:#ed9d13">&#34; &#34;</span>+operator+<span style="color:#ed9d13">&#34; &#34;</span>+<span style="color:#24909d">str</span>(second)+<span style="color:#ed9d13">&#34; = (python: &#34;</span>+<span style="color:#24909d">str</span>(pyAns)+<span style="color:#ed9d13">&#34;, cpp: &#34;</span>+cppAns+<span style="color:#ed9d13">&#34;)&#34;</span>, flush=<span style="color:#6ab825;font-weight:bold">True</span>)
+    <span style="color:#24909d">print</span>(<span style="color:#24909d">str</span>(first)+<span style="color:#ed9d13">&#34; &#34;</span>+operator+<span style="color:#ed9d13">&#34; &#34;</span>+<span style="color:#24909d">str</span>(second)+<span style="color:#ed9d13">&#34; = (python: &#34;</span>+<span style="color:#24909d">str</span>(pyAns)+<span style="color:#ed9d13">&#34;, cpp: &#34;</span>+cppAns+<span style="color:#ed9d13">&#34;)&#34;</span>, file=f)
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="code-rehearsal_yml">./rehearsal.yml</h3>
+<p>最後にrehearsal.ymlです。それぞれのタスクのリレーションを組みます。<code>build</code>フェイズでC++のビルドを行ってから実行を行います。</p>
+<div class="highlight"><div style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">19
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">20
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">21
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">22
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">23
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">24
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">25
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">26
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">27
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">28
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">29
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">30
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">31
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#999;font-style:italic"># ./rehearsal.yml, uses version 1.202109</span><span style="color:#666">
+</span><span style="color:#666">
+</span><span style="color:#666"></span><span style="color:#6ab825;font-weight:bold">version</span>:<span style="color:#666"> </span><span style="color:#3677a9">1.202109</span><span style="color:#666">
+</span><span style="color:#666"></span><span style="color:#6ab825;font-weight:bold">phase</span>:<span style="color:#666">
+</span><span style="color:#666"></span>- <span style="color:#6ab825;font-weight:bold">name</span>:<span style="color:#666"> </span>build<span style="color:#666"> </span><span style="color:#999;font-style:italic"># build and set environments</span><span style="color:#666">
+</span><span style="color:#666">  </span><span style="color:#6ab825;font-weight:bold">task</span>:<span style="color:#666">
+</span><span style="color:#666">  </span>- <span style="color:#6ab825;font-weight:bold">name</span>:<span style="color:#666"> </span>gcc_build<span style="color:#666">
+</span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">kind</span>:<span style="color:#666"> </span>cui<span style="color:#666">
+</span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">cmd</span>:<span style="color:#666"> </span>g++<span style="color:#666">
+</span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">args</span>:<span style="color:#666"> </span>[answer.cpp, -o, answer]<span style="color:#666">
+</span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">stdout</span>:<span style="color:#666">
+</span><span style="color:#666">      </span><span style="color:#6ab825;font-weight:bold">write-log</span>:<span style="color:#666"> </span><span style="color:#6ab825;font-weight:bold">true</span><span style="color:#666">
+</span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">stderr</span>:<span style="color:#666">
+</span><span style="color:#666">      </span><span style="color:#6ab825;font-weight:bold">write-log</span>:<span style="color:#666"> </span><span style="color:#6ab825;font-weight:bold">true</span><span style="color:#666">
+</span><span style="color:#666"></span>- <span style="color:#6ab825;font-weight:bold">name</span>:<span style="color:#666"> </span>run_task <span style="color:#666"> </span><span style="color:#999;font-style:italic"># cpp executable file</span><span style="color:#666">
+</span><span style="color:#666">  </span><span style="color:#6ab825;font-weight:bold">task</span>:<span style="color:#666">
+</span><span style="color:#666">  </span>- <span style="color:#6ab825;font-weight:bold">name</span>:<span style="color:#666"> </span>cpp<span style="color:#666">
+</span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">kind</span>:<span style="color:#666"> </span>cui<span style="color:#666">
+</span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">cmd</span>:<span style="color:#666"> </span>./answer.exe<span style="color:#666">
+</span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">stdout</span>:<span style="color:#666">
+</span><span style="color:#666">      </span><span style="color:#6ab825;font-weight:bold">write-log</span>:<span style="color:#666"> </span><span style="color:#6ab825;font-weight:bold">true</span><span style="color:#666">
+</span><span style="color:#666">      </span><span style="color:#6ab825;font-weight:bold">sendto</span>:<span style="color:#666">
+</span><span style="color:#666">        </span>- python<span style="color:#666">
+</span><span style="color:#666">  </span>- <span style="color:#6ab825;font-weight:bold">name</span>:<span style="color:#666"> </span>python<span style="color:#666"> </span><span style="color:#999;font-style:italic"># run python script</span><span style="color:#666">
+</span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">kind</span>:<span style="color:#666"> </span>cui<span style="color:#666">
+</span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">cmd</span>:<span style="color:#666"> </span>python<span style="color:#666">
+</span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">args</span>:<span style="color:#666"> </span>[quiz.py]<span style="color:#666">
+</span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">stdout</span>:<span style="color:#666">
+</span><span style="color:#666">      </span><span style="color:#6ab825;font-weight:bold">write-log</span>:<span style="color:#666"> </span><span style="color:#6ab825;font-weight:bold">true</span><span style="color:#666">
+</span><span style="color:#666">      </span><span style="color:#6ab825;font-weight:bold">sendto</span>:<span style="color:#666">
+</span><span style="color:#666">        </span>- cpp<span style="color:#666">
+</span></code></pre></td></tr></table>
+</div>
+</div><h2 id="run">実行</h2>
+<p>善は急げです。すべて書き終えたらさっそく実行してみましょう。シェルを開いて<code>rehearsal-cli run -p ./rehearsal.yml</code>を実行します。問題生成はランダムであるため問題の内容はおそらく異なります。</p>
+<div class="highlight"><div style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">19
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">20
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">21
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">22
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">23
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">24
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">25
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">26
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">27
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">28
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">29
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">30
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ rehearsal-cli run -p ./rehearsal.yml
+
+[INFO]:  start phase (<span style="color:#3677a9">1</span> / 5)
+[INFO]:  __init::__frontend_logger was started.
+[INFO]:  start phase (<span style="color:#3677a9">2</span> / 5)
+[INFO]:  build::gcc_build was started.
+[INFO]:  build::gcc_build has been already stopped.
+[INFO]:  start phase (<span style="color:#3677a9">3</span> / 5)
+[INFO]:  run_task::cpp was started.
+[INFO]:  run_task::python was started.
+run_task::python(standard output)       : <span style="color:#3677a9">71191</span> * <span style="color:#3677a9">98267</span>
+run_task::cpp(standard output)          : -1594208595
+run_task::python(standard output)       : <span style="color:#3677a9">97901</span> - <span style="color:#3677a9">46723</span>
+run_task::cpp(standard output)          : <span style="color:#3677a9">51178</span>
+...
+&lt;中略&gt;
+...
+run_task::python(standard output)       : <span style="color:#3677a9">50414</span> / <span style="color:#40ffff">28825</span> = (python: 1.7489679098005204, cpp: 1)
+run_task::python(standard output)       : <span style="color:#3677a9">78334</span> * <span style="color:#40ffff">78476</span> = (python: 6147338984, cpp: 1852371688)
+run_task::python(standard output)       : <span style="color:#3677a9">99560</span> - <span style="color:#40ffff">33870</span> = (python: 65690, cpp: 65690)
+run_task::python(standard output)       : <span style="color:#3677a9">82352</span> / <span style="color:#40ffff">43550</span> = (python: 1.89097588978186, cpp: 1)
+run_task::python(standard output)       : <span style="color:#3677a9">38297</span> % <span style="color:#40ffff">12706</span> = (python: 179, cpp: 179)
+run_task::python(standard output)       : <span style="color:#3677a9">35321</span> - <span style="color:#40ffff">34331</span> = (python: 990, cpp: 990)
+run_task::python(standard output)       : <span style="color:#3677a9">62255</span> % <span style="color:#40ffff">37346</span> = (python: 24909, cpp: 24909)
+run_task::python(standard output)       : <span style="color:#3677a9">56890</span> / <span style="color:#40ffff">71068</span> = (python: 0.8005009286880171, cpp: 0)
+[INFO]:  run_task::cpp has been already stopped.
+[INFO]:  run_task::python has been already stopped.
+[INFO]:  start phase (<span style="color:#3677a9">4</span> / 5)
+[INFO]:  start phase (<span style="color:#3677a9">5</span> / 5)
+[INFO]:  __init::__frontend_logger was stopped.
+</code></pre></td></tr></table>
+</div>
+</div><p>このように表示されたら完了です。</p>
+<h2 id="ended">これが終わったら？</h2>
+<p><a href="/documents">ドキュメント</a>であなたがしたいことを見つけましょう。rehearsalはあなたがやりたいこと、確かめたいことを必ずや実現してくれるはずです。</p>
 
         <div class="section-index">
     

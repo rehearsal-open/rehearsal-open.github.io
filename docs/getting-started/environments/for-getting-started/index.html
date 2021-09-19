@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.88.0-DEV" /><META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
+<meta name="generator" content="Hugo 0.89.0-DEV" /><META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
 <link rel="shortcut icon" type="image/png" href=" /favicons/logo.png ">
 <title>Getting Startedで使用するツールについて | rehearsal</title>
 
@@ -13,7 +13,7 @@
 しかし、残念ながら何らかの言語を用いてGetting Startedを書かなければいけません。このGetting Startedで …">
 <meta property="og:title" content="Getting Startedで使用するツールについて" />
 <meta property="og:description" content="rehearsalは 「言語・デバイス・目的の壁を越えて」 をコンセプトに開発されているので、本来は自分の普段使用している言語・環境で実践するべきだと考えています。
-しかし、残念ながら何らかの言語を用いてGetting Startedを書かなければいけません。このGetting Startedでは、主に基本的なPythonの標準入出力のみを使用して進めていくので基本的な部分を確認します。
+しかし、残念ながら何らかの言語を用いてGetting Startedを書かなければいけません。このGetting Startedでは、主にC&#43;&#43;とPythonの基本的な標準入出力のみを使用して進めていくので基本的な部分を確認します。
 インストール Python 　すでにPython環境があるかどうかを確認し、ない場合はインストールを行ってください。任意のディレクトリでターミナル（bash , powershell , cmd など）を開き、以下のコマンドを実行します（バージョンによって表示内容は異なる場合があります）。
 1 2  $ python --version Python 3.9.5   ダウンロードは公式より配布されている物がよいでしょう。
 C&#43;&#43;(gcc) 　すでにC&#43;&#43;環境があるかどうかを確認し、ない場合はインストールを行ってください。 任意のディレクトリでターミナル（bash , powershell , cmd など）を開き、以下のコマンドを実行します（バージョンなど、各環境によって表示内容は異なる場合があります）。
@@ -21,23 +21,23 @@ C&#43;&#43;(gcc) 　すでにC&#43;&#43;環境があるかどうかを確認し�
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://rehearsal-open.github.io/getting-started/environments/for-getting-started/" /><meta property="og:image" content="https://rehearsal-open.github.io/image/image.jpg"/><meta property="article:section" content="getting-started" />
 <meta property="article:published_time" content="2021-09-03T14:17:37+09:00" />
-<meta property="article:modified_time" content="2021-09-08T08:00:22+09:00" />
+<meta property="article:modified_time" content="2021-09-19T13:15:50+09:00" />
 
 <meta itemprop="name" content="Getting Startedで使用するツールについて">
 <meta itemprop="description" content="rehearsalは 「言語・デバイス・目的の壁を越えて」 をコンセプトに開発されているので、本来は自分の普段使用している言語・環境で実践するべきだと考えています。
-しかし、残念ながら何らかの言語を用いてGetting Startedを書かなければいけません。このGetting Startedでは、主に基本的なPythonの標準入出力のみを使用して進めていくので基本的な部分を確認します。
+しかし、残念ながら何らかの言語を用いてGetting Startedを書かなければいけません。このGetting Startedでは、主にC&#43;&#43;とPythonの基本的な標準入出力のみを使用して進めていくので基本的な部分を確認します。
 インストール Python 　すでにPython環境があるかどうかを確認し、ない場合はインストールを行ってください。任意のディレクトリでターミナル（bash , powershell , cmd など）を開き、以下のコマンドを実行します（バージョンによって表示内容は異なる場合があります）。
 1 2  $ python --version Python 3.9.5   ダウンロードは公式より配布されている物がよいでしょう。
 C&#43;&#43;(gcc) 　すでにC&#43;&#43;環境があるかどうかを確認し、ない場合はインストールを行ってください。 任意のディレクトリでターミナル（bash , powershell , cmd など）を開き、以下のコマンドを実行します（バージョンなど、各環境によって表示内容は異なる場合があります）。
 1 2 3 4 5 6 7 8 9  $ g&#43;&#43; -v Using built-in specs. COLLECT_GCC=C:\tools\msys64\mingw64\bin\g&#43;&#43;.exe COLLECT_LTO_WRAPPER=C:/tools/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.3.0/lto-wrapper.exe Target: x86_64-w64-mingw32 Configured with: ../gcc-10.3.0/configure --prefix=/mingw64 --with-local-prefix=/mingw64/local --build=x86_64-w64-mingw32 --host=x86_64-w64-mingw32 --target=x86_64-w64-mingw32 --with-native-system-header-dir=/mingw64/x86_64-w64-mingw32/include --libexecdir=/mingw64/lib --enable-bootstrap --enable-checking=release --with-arch=x86-64 --with-tune=generic --enable-languages=c,lto,c&#43;&#43;,fortran,ada,objc,obj-c&#43;&#43;,jit --enable-shared --enable-static --enable-libatomic --enable-threads=posix --enable-graphite --enable-fully-dynamic-string --enable-libstdcxx-filesystem-ts=yes --enable-libstdcxx-time=yes --disable-libstdcxx-pch --disable-libstdcxx-debug --enable-lto --enable-libgomp --disable-multilib --disable-rpath --disable-win32-registry --disable-nls --disable-werror --disable-symvers --with-libiconv --with-system-zlib --with-gmp=/mingw64 --with-mpfr=/mingw64 --with-mpc=/mingw64 --with-isl=/mingw64 --with-pkgversion=&#39;Rev2, Built by MSYS2 project&#39; --with-bugurl=https://github."><meta itemprop="datePublished" content="2021-09-03T14:17:37+09:00" />
-<meta itemprop="dateModified" content="2021-09-08T08:00:22+09:00" />
-<meta itemprop="wordCount" content="206"><meta itemprop="image" content="https://rehearsal-open.github.io/image/image.jpg"/>
+<meta itemprop="dateModified" content="2021-09-19T13:15:50+09:00" />
+<meta itemprop="wordCount" content="213"><meta itemprop="image" content="https://rehearsal-open.github.io/image/image.jpg"/>
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://rehearsal-open.github.io/image/image.jpg"/>
 
 <meta name="twitter:title" content="Getting Startedで使用するツールについて"/>
 <meta name="twitter:description" content="rehearsalは 「言語・デバイス・目的の壁を越えて」 をコンセプトに開発されているので、本来は自分の普段使用している言語・環境で実践するべきだと考えています。
-しかし、残念ながら何らかの言語を用いてGetting Startedを書かなければいけません。このGetting Startedでは、主に基本的なPythonの標準入出力のみを使用して進めていくので基本的な部分を確認します。
+しかし、残念ながら何らかの言語を用いてGetting Startedを書かなければいけません。このGetting Startedでは、主にC&#43;&#43;とPythonの基本的な標準入出力のみを使用して進めていくので基本的な部分を確認します。
 インストール Python 　すでにPython環境があるかどうかを確認し、ない場合はインストールを行ってください。任意のディレクトリでターミナル（bash , powershell , cmd など）を開き、以下のコマンドを実行します（バージョンによって表示内容は異なる場合があります）。
 1 2  $ python --version Python 3.9.5   ダウンロードは公式より配布されている物がよいでしょう。
 C&#43;&#43;(gcc) 　すでにC&#43;&#43;環境があるかどうかを確認し、ない場合はインストールを行ってください。 任意のディレクトリでターミナル（bash , powershell , cmd など）を開き、以下のコマンドを実行します（バージョンなど、各環境によって表示内容は異なる場合があります）。
@@ -300,19 +300,20 @@ C&#43;&#43;(gcc) 　すでにC&#43;&#43;環境があるかどうかを確認し�
 
 <div class="td-toc"><nav id="TableOfContents">
   <ul>
-    <li><a href="#インストール">インストール</a>
+    <li><a href="#install">インストール</a>
       <ul>
-        <li><a href="#python">Python</a></li>
-        <li><a href="#cgcc">C++(gcc)</a></li>
+        <li><a href="#install-python">Python</a></li>
+        <li><a href="#install-gcc">C++(gcc)</a></li>
       </ul>
     </li>
-    <li><a href="#標準入出力">標準入出力</a>
+    <li><a href="#stdio">標準入出力</a>
       <ul>
-        <li><a href="#python-1">Python</a></li>
-        <li><a href="#c">C++</a></li>
+        <li><a href="#stdio-generally_speaking">全般的に言えること</a></li>
+        <li><a href="#stdio-python">Python</a></li>
+        <li><a href="#stdio-cpp">C++</a></li>
       </ul>
     </li>
-    <li><a href="#テキストエンコーディングについて">テキストエンコーディングについて</a></li>
+    <li><a href="#encoding">テキストエンコーディングについて</a></li>
   </ul>
 </nav></div>
 
@@ -400,9 +401,9 @@ C&#43;&#43;(gcc) 　すでにC&#43;&#43;環境があるかどうかを確認し�
 		
 	</header>    
 	<p>　rehearsalは <strong>「言語・デバイス・目的の壁を越えて」</strong> をコンセプトに開発されているので、本来は自分の普段使用している言語・環境で実践するべきだと考えています。</p>
-<p>しかし、残念ながら何らかの言語を用いてGetting Startedを書かなければいけません。このGetting Startedでは、主に基本的なPythonの標準入出力のみを使用して進めていくので基本的な部分を確認します。</p>
-<h2 id="インストール">インストール</h2>
-<h3 id="python">Python</h3>
+<p>しかし、残念ながら何らかの言語を用いてGetting Startedを書かなければいけません。このGetting Startedでは、主にC++とPythonの基本的な標準入出力のみを使用して進めていくので基本的な部分を確認します。</p>
+<h2 id="install">インストール</h2>
+<h3 id="install-python">Python</h3>
 <p>　すでにPython環境があるかどうかを確認し、ない場合はインストールを行ってください。任意のディレクトリでターミナル（<code>bash</code> , <code>powershell</code> , <code>cmd</code> など）を開き、以下のコマンドを実行します（バージョンによって表示内容は異なる場合があります）。</p>
 <div class="highlight"><div style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
@@ -415,7 +416,7 @@ Python 3.9.5
 </code></pre></td></tr></table>
 </div>
 </div><p>ダウンロードは<a href="https://www.python.org/downloads/">公式</a>より配布されている物がよいでしょう。</p>
-<h3 id="cgcc">C++(gcc)</h3>
+<h3 id="install-gcc">C++(gcc)</h3>
 <p>　すでにC++環境があるかどうかを確認し、ない場合はインストールを行ってください。
 任意のディレクトリでターミナル（<code>bash</code> , <code>powershell</code> , <code>cmd</code> など）を開き、以下のコマンドを実行します（バージョンなど、各環境によって表示内容は異なる場合があります）。</p>
 <div class="highlight"><div style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
@@ -443,8 +444,12 @@ gcc version 10.3.0 (Rev2, Built by MSYS2 project)
 </code></pre></td></tr></table>
 </div>
 </div><p>ダウンロードはlinux仮想環境をインストールして同梱のものを用いるか、WindowsであればMSYS2を使用してgccをインストールするのがよいでしょう。</p>
-<h2 id="標準入出力">標準入出力</h2>
-<h3 id="python-1">Python</h3>
+<h2 id="stdio">標準入出力</h2>
+<h3 id="stdio-generally_speaking">全般的に言えること</h3>
+<ul>
+<li>出力側のテキストに関して<code>flush</code>を行うようにしてください。これが記述されていない場合、最後まで読み取れない恐れがあります。</li>
+</ul>
+<h3 id="stdio-python">Python</h3>
 <p>　Pythonの標準入出力系の関数を確認します。 rehearsalのGetting Startedで使用する関数は <strong>2個</strong> しかありません。これはどれだけ複雑な組み合わせをしていても変わりません。</p>
 <div class="highlight"><div style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
@@ -454,12 +459,12 @@ gcc version 10.3.0 (Rev2, Built by MSYS2 project)
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 <pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#24909d">str</span> s
-<span style="color:#24909d">input</span>(s)                     <span style="color:#999;font-style:italic"># 標準入力</span>
-println(<span style="color:#ed9d13">&#34;Hello World, &#34;</span> + s) <span style="color:#999;font-style:italic"># 標準出力・標準エラー出力（改行含む）</span>
+<span style="color:#24909d">input</span>(s)                                    <span style="color:#999;font-style:italic"># 標準入力</span>
+<span style="color:#24909d">print</span>(<span style="color:#ed9d13">&#34;Hello World, &#34;</span> + s, flush=<span style="color:#6ab825;font-weight:bold">True</span>)    <span style="color:#999;font-style:italic"># 標準出力・標準エラー出力（改行含む）</span>
 </code></pre></td></tr></table>
 </div>
-</div><p><code>input()</code>, <code>print()</code> はどちらも言語に組み込まれている関数で、それぞれ標準入力からのデータ取得、標準出力への書き込みを行います。</p>
-<h3 id="c">C++</h3>
+</div><p><code>input()</code>, <code>print()</code> はどちらも言語に組み込まれている関数で、それぞれ標準入力からのデータ取得、標準出力への書き込みを行います。出力する際には<code>flush=True</code>とするべきです。</p>
+<h3 id="stdio-cpp">C++</h3>
 <p>　C++の標準入出力系の関数を確認します。rehearsalのGetting Startedで使用する関数は <strong>2個</strong> しかありません。</p>
 <div class="highlight"><div style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
@@ -480,15 +485,15 @@ println(<span style="color:#ed9d13">&#34;Hello World, &#34;</span> + s) <span st
 
 <span style="color:#6ab825;font-weight:bold">int</span> <span style="color:#447fcf">main</span>() {
     string s;
-    cin &gt;&gt; s;                               <span style="color:#999;font-style:italic">// 標準入力
-</span><span style="color:#999;font-style:italic"></span>    cout &lt;&lt; <span style="color:#ed9d13">&#34;Hello World, &#34;</span> + s &lt;&lt; endl;    <span style="color:#999;font-style:italic">// 標準出力（改行含む）
-</span><span style="color:#999;font-style:italic"></span>    cerr &lt;&lt; <span style="color:#ed9d13">&#34;OK&#34;</span> &lt;&lt; endl;                   <span style="color:#999;font-style:italic">// 標準エラー出力（改行を含む、今回は使用しない）
+    cin &gt;&gt; s;                                       <span style="color:#999;font-style:italic">// 標準入力
+</span><span style="color:#999;font-style:italic"></span>    cout &lt;&lt; <span style="color:#ed9d13">&#34;Hello World, &#34;</span> + s &lt;&lt; flush &lt;&lt;  endl;  <span style="color:#999;font-style:italic">// 標準出力（改行含む）
+</span><span style="color:#999;font-style:italic"></span>    cerr &lt;&lt; <span style="color:#ed9d13">&#34;OK&#34;</span> &lt;&lt; flush &lt;&lt; endl;                  <span style="color:#999;font-style:italic">// 標準エラー出力（改行を含む、今回は使用しない）
 </span><span style="color:#999;font-style:italic"></span>    <span style="color:#6ab825;font-weight:bold">return</span> <span style="color:#3677a9">0</span>;
 }
 </code></pre></td></tr></table>
 </div>
 </div><p>これらに相当する関数は各言語ある（と思っている）ので、Python以外を使用する方はそれらを利用してください。ただし、言語に組み込まれている関数の中には、Go言語の <a href="https://pkg.go.dev/builtin#print"><code>(builtin).print()</code></a> 関数など、標準エラー出力に書き込む関数もあるためその確認もしておくとよいでしょう。</p>
-<h2 id="テキストエンコーディングについて">テキストエンコーディングについて</h2>
+<h2 id="encoding">テキストエンコーディングについて</h2>
 <p>　残念ながら、開発者の力不足により異種のエンコーディングをrehearsal内部で変換する実装が行えていません。rehearsalとしては、一般的なutf-8の使用を推奨しています。</p>
 
 	
